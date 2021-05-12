@@ -18,11 +18,6 @@ header{
     padding: 0;
 }
 
-main{
-    width: 100%;
-    height: 100vh;
-}
-
 header h1{
     font-size: 60px;
     position: absolute;
@@ -82,4 +77,21 @@ header h1{
 
 .MenuListItem:hover{
     color: rgb(253, 213, 168);
+}
+
+.presentation{
+    background-color: rgb(236, 159, 71);
+    width: 100%;
+    height: 100vh;
+}
+
+.actualites{
+    background-color: rgb(240, 104, 83);
+    width: 100%;
+    height: 100vh;
+}
+
+footer{
+    height: 200px;
+    background-color: rgb(68, 133, 120);
 }
