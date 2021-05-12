@@ -12,8 +12,21 @@
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
+
+        <link href="{{ asset('assets/css/accueil.css') }}" rel="stylesheet" />
+
     </head>
     <body>
-        {% block body %}{% endblock %}
+        
+        {% block body %}
+        
+        
+        {% endblock %}
+
+        <!-- Lien Green Sock -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+        <!-- Lien fichier JS -->
+        <script src="assets/js/accueil.js"></script>
     </body>
 </html>

@@ -1,20 +1,59 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AccueilController!{% endblock %}
+{% block title %}Accueil{% endblock %}
+
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <header>
+        <h1>Phrase d'accroche de Novart</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Applications/MAMP/htdocs/symfony/Projet NovArt/projetnovart/src/Controller/AccueilController.php'|file_link(0) }}">src/Controller/AccueilController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Applications/MAMP/htdocs/symfony/Projet NovArt/projetnovart/templates/accueil/index.html.twig'|file_link(0) }}">templates/accueil/index.html.twig</a></code></li>
-    </ul>
-</div>
+        <a href="#" class="btn">
+            <img src="menu.svg" alt="#" class="menuIcon">
+        </a>
+
+        <div class="conteneurMenu">
+
+            <ul class="listeMenu">
+    
+                <a href="#">
+                    <li class="MenuListItem">Accueil</li>
+                </a>
+    
+                <a href="#">
+                    <li class="MenuListItem">Nos Malettes</li>
+                </a>
+    
+                <a href="#">
+                    <li class="MenuListItem">Mon compte</li>
+                </a>
+    
+                <a href="#">
+                    <li class="MenuListItem">Actualités</li>
+                </a>
+
+                <a href="#">
+                    <li class="MenuListItem">Glossaire</li>
+                </a>
+
+                <a href="#">
+                    <li class="MenuListItem">Parents</li>
+                </a>
+
+                <a href="#">
+                    <li class="MenuListItem">Panier</li>
+                </a>
+
+                <a href="#">
+                    <li class="MenuListItem">Contact</li>
+                </a>
+    
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <h1>Présentation</h1>
+    </main>
+
 {% endblock %}
