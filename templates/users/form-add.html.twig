@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Inscription {% endblock %}
+
+
+{% block body%}
+
+   <h1> Formulaire d'inscription </h1>
+    
+   {{ form_start(formUser) }} 
+   
+          <div class="row">
+            <div class="col">
+            {{form_label (formUser.nom,'Votre nom')}}
+               {{ form_widget(formUser.nom) }}
+            </div>  
+            <div class="col">
+            {{form_label (formUser.prenom,'Votre prénom')}}
+               {{ form_widget(formUser.prenom) }}
+            </div>  
+        </div>
+        <br>
+        <div class="row">
+              <div class="col">
+            {{form_label (formUser.email,'Votre email')}}
+               {{ form_widget(formUser.email) }}
+            </div> 
+         <div class="col">
+            {{form_label (formUser.password,'Votre mot de pass')}}
+               {{ form_widget(formUser.password) }}
+            </div> 
+         </div>
+         <br>
+        <div class="row">
+              <div class="col">
+            {{form_label (formUser.voie,'Votre voie')}}
+               {{ form_widget(formUser.voie) }}
+            </div> 
+         <div class="col">
+            {{form_label (formUser.code_postal,'Votre code postal')}}
+               {{ form_widget(formUser.code_postal) }}
+            </div> 
+              <div class="col">
+            {{form_label (formUser.ville,'Votre ville')}}
+               {{ form_widget(formUser.ville) }}
+            </div> 
+         </div>
+        
+       
+       <button type="submit" class="btn btn-dark btn-sm">Enregistrer</button>
+    {{ form_end(formUser) }}  
+       
+
+
+{% endblock %}
