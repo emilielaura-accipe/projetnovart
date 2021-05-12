@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\MalletteRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -56,6 +58,16 @@ class Mallette
      * @ORM\Column(type="string", length=255)
      */
     private $legende_oeuvres;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Jeux::class, mappedBy="id_nom")
+     */
+    private $jeu_id;
+
+    public function __construct()
+    {
+        $this->jeu_id = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -154,6 +166,36 @@ class Mallette
     public function setLegendeOeuvres(string $legende_oeuvres): self
     {
         $this->legende_oeuvres = $legende_oeuvres;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Jeux[]
+     */
+    public function getJeuId(): Collection
+    {
+        return $this->jeu_id;
+    }
+
+    public function addJeuId(Jeux $jeuId): self
+    {
+        if (!$this->jeu_id->contains($jeuId)) {
+            $this->jeu_id[] = $jeuId;
+            $jeuId->setIdNom($this);
+        }
+
+        return $this;
+    }
+
+    public function removeJeuId(Jeux $jeuId): self
+    {
+        if ($this->jeu_id->removeElement($jeuId)) {
+            // set the owning side to null (unless already changed)
+            if ($jeuId->getIdNom() === $this) {
+                $jeuId->setIdNom(null);
+            }
+        }
 
         return $this;
     }
