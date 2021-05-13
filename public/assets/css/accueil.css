@@ -1,15 +1,29 @@
+/* Include des polices */
+@font-face {
+    font-family: 'Router-Bold';
+    src: url('../polices/Router-Bold.otf');
+
+    font-family: 'Mathlete-Bulky';
+    src: url('../polices/Mathlete-Bulky.otf');
+    
+    font-family: 'Router-Book';
+    src: url('../polices/Router-Book.otf');
+}
+
 body{
     padding: 0;
     margin: 0;
     width: 100%;
     height: 100%;
-    font-family: sans-serif;
 }
 
+/* Gestion des liens du site */
 a{
     text-decoration: none;
 }
 
+
+/* DIV Header */
 header{
     width: 100%;
     height: 100vh;
@@ -18,14 +32,22 @@ header{
     padding: 0;
 }
 
-header h1{
+#logo_header{
+    padding-top: 50px;
+}
+
+h1{
     font-size: 60px;
+    font-family: 'Router-Bold';
     position: absolute;
     top: 40%;
     left: 30%;
-    color:rgb(91, 76, 141);
+    color:rgb(29, 58, 97);
 }
+/* Fin DIV Header */
 
+
+/* DIV Menu */
 .btn{
     position: fixed;
     left: 40px;
@@ -55,20 +77,18 @@ header h1{
 }
 
 .listeMenu{
-    padding: 0;
-    margin-top: 240px;
-    font-size: 30px;
+    margin-top: 220px;
+    margin-left: 60px;
+    font-size: 35px;
     line-height: 1.2;
-    text-transform: uppercase;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .MenuListItem{
     position: relative;
     margin-top: 20px;
-    color: rgb(252, 235, 203);
+    color: rgb(255, 255, 255);
     list-style-type: none;
     cursor: pointer;
     opacity: 0;
@@ -76,22 +96,108 @@ header h1{
 }
 
 .MenuListItem:hover{
-    color: rgb(253, 213, 168);
+    color: rgb(255, 226, 193);
 }
+/* Fin DIV Menu */
 
-.presentation{
-    background-color: rgb(236, 159, 71);
-    width: 100%;
+
+/* DIV Présentation */
+#presentation{
+    background-color: rgb(250, 177, 93);
+    text-align: center;
     height: 100vh;
 }
 
-.actualites{
-    background-color: rgb(240, 104, 83);
-    width: 100%;
-    height: 100vh;
+#entete_pres{
+    justify-content: center;
+    padding: 50px;
 }
 
+h2{
+    font-size: 3vw;
+    color: rgb(29, 58, 97);
+    margin-top: 50px;
+}
+
+#elements_pres{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.picto_pres{
+    display: block;
+    flex-direction: column;
+}
+
+h4{
+    font-size: 50px;
+    font-family: 'Mathlete-Bulky';
+    color: rgb(240, 104, 83);
+}
+
+.picto_pres li {
+    font-family: 'Router-Book';
+    font-size: 25px;
+    color: rgb(255, 226, 193);
+}
+/* Fin DIV Présentation */
+
+
+/* DIV Actualités */
+#actualites{
+    background-color: rgb(255, 226, 193);
+    height: 100vh;
+    text-align: center;
+    padding: 50px;
+}
+
+h3{
+    font-size: 3vw;
+    margin-top: 50px;
+    color: rgb(29, 58, 97);
+}
+
+#bloc_actu{
+    display: flex;
+    justify-content: space-around;
+}
+
+.article_actu{
+    width: 400px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.titre_actu{
+    position: absolute;
+    bottom: -40px;
+    height: 120px;
+    width: 300px;
+    background-color: rgb(91, 76, 141);
+}
+
+h5{
+    font-size: 25px;
+    color: rgb(255, 226, 193);
+}
+/* Fin DIV Actualités */
+
+
+/* Début DIV Footer */
 footer{
-    height: 200px;
+    height: 400px;
     background-color: rgb(68, 133, 120);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+
+#info_footer{
+    font-size: 22px;
+    color: rgb(255, 226, 193);
+    line-height: 1.7;
+}
+/* Fin DIV Footer */
+

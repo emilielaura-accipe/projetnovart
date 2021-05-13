@@ -5,7 +5,12 @@
 
 {% block body %}
 
+    <!-- DIV Header -->
     <header>
+        <div id="logo_header">
+            <p>ICI LE LOGO NOVART</p>
+        </div>
+        
         <h1>Phrase d'accroche de Novart</h1>
 
         <a href="#" class="btn">
@@ -52,15 +57,87 @@
         </div>
     </header>
 
-    <div class="presentation">
-        <h1>Présentation</h1>
+    <!-- DIV Présentation -->
+    <div id="presentation">
+        <div id="entete_pres">
+            <h2>Avec Novart, découvrez l'art en vous amusant ! <br>Nous vous proposons des mallettes pédagogiques et créatives blablabla</h2>
+        </div>
+
+        <div id="elements_pres">
+
+            <div class="picto_pres">
+                <i class="fas fa-puzzle-piece"></i>
+                <h4>Un thème artistique <br> par mallette</h4>
+                <li>L'art abstrait</li>
+                <li>Le cubisme</li>
+                <li>La photographie</li>
+                <li>Les animaux dans l'art</li>
+                <li>Le paysage dans l'art</li>
+            </div>
+
+            <div class="picto_pres">
+                <i class="fas fa-puzzle-piece"></i>
+                <h4>Des jeux en ligne <br> interactifs</h4>
+                <li>Un puzzle</li>
+                <li>Un memory</li>
+                <li>Un coloriage</li>
+                <li>Des quizz</li>
+                <li>Gagnez des points bonus</li>
+            </div>
+
+            <div class="picto_pres">
+                <i class="fas fa-puzzle-piece"></i>
+                <h4>Des contenus <br> accessibles pour tous</h4>
+                <li>Pour les petits <br> comme pour les grands</li>
+            </div>
+
+        </div>
     </div>
 
-    <div class="actualites">
-        <h1>Actualités</h1>
+    <!-- DIV Actualités -->
+    <div id="actualites">
+        <h3>Les dernières actualités artistiques</h3>
+
+        <div id="bloc_actu">
+
+            <div class="article_actu">
+                <div class="titre_actu">
+                    <h5>Ici le titre de l'article</h5>
+                </div>
+            </div>
+            
+            <div class="article_actu">
+                <div class="titre_actu">
+                    <h5>Ici le titre de l'article</h5>
+                </div>
+            </div>
+
+            <div class="article_actu">
+                <div class="titre_actu">
+                    <h5>Ici le titre de l'article</h5>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
+    <!-- DIV Footer -->
     <footer>
+        <div id="logo_footer">
+            <p>ICI LE LOGO NOVART</p>
+        </div>
+
+        <div id="social_footer">
+            <p>ICI LES RESEAUX NOVART</p>
+        </div>
+
+        <div id="info_footer">
+            <li>Contact</li>
+            <li>Parents</li>
+            <li>CGV / CGU</li>
+            <li>Sécurité et prudence en ligne</li>
+        </div>
     </footer>
 
 {% endblock %}
