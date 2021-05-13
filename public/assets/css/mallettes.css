@@ -1,0 +1,96 @@
+#containerMal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+    
+#containerMal h1{
+    font-family: 'Router-Bold';
+    font-size: 50px;
+    text-align: center;
+}
+
+#mallettes{
+    position: absolute;
+    top: 50%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    height: 66%;
+    width: 70%;
+    display: grid;
+    grid-template: repeat(4, 150px) / repeat(11, 8%);
+}
+
+.itemMenu{
+    border: 2px solid rgb(64, 165, 161);
+    transform: translate(-3000px);
+    position: relative;
+    cursor: pointer;
+}
+
+.itemMenu:nth-child(1) {
+    /* début row / début col / fin row / fin col */
+    grid-area: 1 / 2 / 2 / 6;
+    margin-right: -2px;
+}
+
+.itemMenu:nth-child(2) {
+    grid-area: 1 / 6 / 2 / 11;
+}
+
+.itemMenu:nth-child(3) {
+    grid-area: 2 / 4 / 3 / 8;
+    margin-top: -2px;
+    margin-right: -2px;
+}
+
+.itemMenu:nth-child(4) {
+    grid-area: 2 / 8 / 3 / 12;
+    margin-top: -2px;
+}
+
+.itemMenu:nth-child(5) {
+    grid-area: 3 / 1 / 4 / 6;
+    margin-top: -2px;
+}
+
+.itemMenu:nth-child(6) {
+    grid-area: 3 / 6 / 4 / 10;
+    margin-top: -2px;
+    margin-left: -2px;
+}
+
+.itemMenu:nth-child(7) {
+    grid-area: 4 / 5 / 5 / 12;
+    margin-top: -2px;
+}
+
+.animLink{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: 500ms all ease;
+}
+
+.animLink:hover{
+    transform: translateY(-15px) !important;
+    background-color: rgb(64, 165, 161);
+}
+
+.itemMenu a{
+    font-family: 'Mathlete-Bulky';
+    font-size: 2.7vw;
+    color: rgb(64, 165, 161);
+    letter-spacing: 4px;
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    transition: 500ms all ease;
+}
+
+.animLink:hover a{
+    color: rgb(252, 235, 203);
+}

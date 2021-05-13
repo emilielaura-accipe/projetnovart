@@ -1,0 +1,20 @@
+/* Include des polices */
+@font-face {
+    font-family: 'Router-Book';
+    src: url('../polices/Router-Book.otf');
+}
+
+@font-face {
+    font-family: 'Router-Bold';
+    src: url('../polices/Router-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Mathlete-Bulky';
+    src: url('../polices/Mathlete-Bulky.otf');
+}
+
+@font-face {
+    font-family: 'Mathlete-Skinny';
+    src: url('../polices/Mathlete-Skinny.otf');
+}
