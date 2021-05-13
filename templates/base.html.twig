@@ -7,13 +7,18 @@
     
         <!-- Lien css Accueil -->
         <link href="{{ asset('assets/css/accueil.css') }}" rel="stylesheet" />
-
+        <link href="{{ asset('assets/css/jeux.css') }}" rel="stylesheet" />
         <!-- Lien pour îcones Fontawesome -->
         <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+      <!-- Lien css Polices -->
+      <link href="{{ asset('assets/css/polices.css') }}" rel="stylesheet" />
+
 
     </head>
     <body>
     {{ include('menu.html.twig')}}
+    <!-- Lien css Polices -->
+
     {% block body %}{% endblock %}
 
 

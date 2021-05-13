@@ -1,38 +1,35 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-{# Le logo #}
-<header>
-        <div id="logo_header">
-            <p>ICI LE LOGO NOVART</p>
-    {# Texte a voir ce qu'on met #}
-            <P>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.</p>
-        </div>
-</header>
 
-{# Les trois jeux (puzzle, memory, coloriage) #}
+        {# Texte a voir ce qu'on met #}
+            <div id="texte">
 
-<div id="Jeux">
-        <div>
-            <div class="puzzle">
-                <div>
-                    <h5>Puzzle</h5>
-                </div>
-            </div>
-            
-            <div class="memory">
-                <div>
-                    <h5>Memory</h5>
-                </div>
+                <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.</p>
+
             </div>
 
-            <div class="coloriage">
-                <div>
-                    <h5>Coloriage</h5>
+        {# Les trois jeux (puzzle, memory, coloriage) #}
+
+        <div id="jeux">
+                <div class="puzzle">
+                    <div>
+                        <p>Puzzle</p>
+                    </div>
                 </div>
-            </div>
-            
-        </div>
+                
+                <div class="memory">
+                    <div>
+                        <p>Memory</p>
+                    </div>
+                </div>
+
+                <div class="coloriage">
+                    <div>
+                        <p>Coloriage</p>
+                    </div>
+                </div>
+        </div>    
 
 
 {% endblock %}
