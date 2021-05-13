@@ -1,14 +1,24 @@
 /* Include des polices */
 @font-face {
-    font-family: 'Router-Bold';
-    src: url('../polices/Router-Bold.otf');
-
-    font-family: 'Mathlete-Bulky';
-    src: url('../polices/Mathlete-Bulky.otf');
-    
     font-family: 'Router-Book';
     src: url('../polices/Router-Book.otf');
 }
+
+@font-face {
+    font-family: 'Router-Bold';
+    src: url('../polices/Router-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Mathlete-Bulky';
+    src: url('../polices/Mathlete-Bulky.otf');
+}
+
+@font-face {
+    font-family: 'Mathlete-Skinny';
+    src: url('../polices/Mathlete-Skinny.otf');
+}
+
 
 body{
     padding: 0;
@@ -26,19 +36,21 @@ a{
 /* DIV Header */
 header{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgb(252, 235, 203);
     margin: 0;
     padding: 0;
 }
 
 #logo_header{
-    padding-top: 50px;
+    padding-top: 75px;
+    text-align: center;
 }
 
 h1{
-    font-size: 60px;
-    font-family: 'Router-Bold';
+    font-size: 75px;
+    letter-spacing: 8px;
+    font-family: 'Mathlete-Bulky';
     position: absolute;
     top: 40%;
     left: 30%;
@@ -68,7 +80,7 @@ h1{
 }
 
 .conteneurMenu{
-    background: rgb(250, 168, 75);
+    background: rgb(250, 177, 93);
     height: 100%;
     width: 0;
     position: fixed;
@@ -80,6 +92,7 @@ h1{
     margin-top: 220px;
     margin-left: 60px;
     font-size: 35px;
+    font-family: 'Router-Book';
     line-height: 1.2;
     display: flex;
     flex-direction: column;
@@ -88,7 +101,7 @@ h1{
 .MenuListItem{
     position: relative;
     margin-top: 20px;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 226, 193);
     list-style-type: none;
     cursor: pointer;
     opacity: 0;
@@ -96,7 +109,7 @@ h1{
 }
 
 .MenuListItem:hover{
-    color: rgb(255, 226, 193);
+    color: rgb(252, 208, 161);
 }
 /* Fin DIV Menu */
 
@@ -105,16 +118,19 @@ h1{
 #presentation{
     background-color: rgb(250, 177, 93);
     text-align: center;
-    height: 100vh;
+    min-height: 120vh;
 }
 
 #entete_pres{
-    justify-content: center;
     padding: 50px;
+    width: 65%;
+    margin: 0 auto;
 }
 
 h2{
-    font-size: 3vw;
+    font-size: 50px;
+    font-family: 'Router-Bold';
+    line-height: 1.2;
     color: rgb(29, 58, 97);
     margin-top: 50px;
 }
@@ -122,7 +138,6 @@ h2{
 #elements_pres{
     display: flex;
     justify-content: space-around;
-    text-align: center;
 }
 
 .picto_pres{
@@ -132,14 +147,23 @@ h2{
 
 h4{
     font-size: 50px;
+    letter-spacing: 3px;
+    line-height: 1.1;
     font-family: 'Mathlete-Bulky';
-    color: rgb(240, 104, 83);
+    color: rgb(235, 92, 70);
+    margin-bottom: 30px;
 }
 
 .picto_pres li {
     font-family: 'Router-Book';
-    font-size: 25px;
+    font-size: 28px;
+    line-height: 1.5;
     color: rgb(255, 226, 193);
+    list-style-type: none;
+}
+
+.picto_pres i{
+    color: rgb(235, 92, 70);
 }
 /* Fin DIV Présentation */
 
@@ -147,13 +171,14 @@ h4{
 /* DIV Actualités */
 #actualites{
     background-color: rgb(255, 226, 193);
-    height: 100vh;
+    min-height: 105vh;
     text-align: center;
     padding: 50px;
 }
 
 h3{
     font-size: 3vw;
+    font-family: 'Router-Bold';
     margin-top: 50px;
     color: rgb(29, 58, 97);
 }
@@ -161,26 +186,29 @@ h3{
 #bloc_actu{
     display: flex;
     justify-content: space-around;
+    padding-top: 55px;
 }
 
 .article_actu{
     width: 400px;
     height: 500px;
     background-color: rgb(255, 255, 255);
-    position: relative;
 }
 
 .titre_actu{
-    position: absolute;
-    bottom: -40px;
     height: 120px;
     width: 300px;
     background-color: rgb(91, 76, 141);
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 420px;
 }
 
 h5{
     font-size: 25px;
+    font-family: 'Router-Book';
     color: rgb(255, 226, 193);
+    padding-top: 40px;
 }
 /* Fin DIV Actualités */
 
@@ -196,8 +224,20 @@ footer{
 
 #info_footer{
     font-size: 22px;
+    font-family: 'Router-Book';
     color: rgb(255, 226, 193);
     line-height: 1.7;
+    list-style-type: none;
+}
+
+#social_footer{
+    display: flex;
+    list-style-type: none;
+}
+
+#social_footer li a{
+    color: rgb(255, 226, 193);
+    padding-left: 20px;
 }
 /* Fin DIV Footer */
 
