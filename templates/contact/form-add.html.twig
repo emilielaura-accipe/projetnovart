@@ -2,40 +2,45 @@
 
 {% block title %} Contact {% endblock %}
 
+{% block stylesheets %}
+    <link href="{{ asset('assets/css/contact.css') }}" rel="stylesheet" />
+{% endblock %}
 
 {% block body%}
 
-   <div id="form_contact">
+   <div class="form">
      
       <h1> Formulaire de contact </h1>
+
+      <h2>Vous avez une question, une réclamation, ou vous souhaitez nous faire part d'une idée ? Écrivez-nous !</h2>
    
       {{ form_start(formContact) }} 
 
-      <div class="champLine">
          <div class="champs">
             {{form_label (formContact.nom,'Votre nom')}}
             {{ form_widget(formContact.nom) }}
-         </div>
+
 
          <div class="champs">
             {{form_label (formContact.prenom,'Votre prénom')}}
             {{ form_widget(formContact.prenom) }}
          </div>  
-      </div>
-   
-      <div class="champs">
-         {{form_label (formContact.email,'Votre email')}}
-         {{ form_widget(formContact.email) }}
-      </div>
-
-      <div class="champs">
-         {{form_label (formContact.message,'Votre message')}}
-         {{ form_widget(formContact.message) }}
-      </div> 
       
-      <button type="submit" class="">Enregistrer
-         {{ form_end(formContact) }}
-      </button>
+         <div class="champs">
+            {{form_label (formContact.email,'Votre email')}}
+            {{ form_widget(formContact.email) }}
+         </div>
+
+         <div class="champs message">
+            {{form_label (formContact.message,'Votre message')}}
+            {{ form_widget(formContact.message) }}
+         </div> 
+
+         <div class="bouton">
+            <button type="submit">Envoyer</button>
+         </div>
+
+      {{ form_end(formContact) }}
 
    </div>
       

@@ -1,1 +1,14 @@
+.champs {
+    color: rgb(29, 58, 97);   
+}
 
+button{
+    background-color:rgb(29, 58, 97);
+}
+
+.message input[text] {
+}
+
+.message input[type="text"] {
+    height: 200px;
+}
