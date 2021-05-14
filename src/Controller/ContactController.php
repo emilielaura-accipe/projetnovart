@@ -20,35 +20,30 @@ class ContactController extends AbstractController
         ]);
     }
 
-}
     /**
     * @Route("/contact/add", name="contact_add")
     */
 
     public function add(Request $request)
     {
-    $contact = new Contact;
-    $formContact = $this->createForm(ContactType::class,$contact);
-    
-    
-    $formContact->handleRequest($request);
-    if($formContact->isSubmitted() && $formContact->isValid())
-    {
-     $entityManger = $this->getDoctrine()->getManager();
-     $entityManger->persist($contact);
-     $entityManger->flush();
+        $contact = new Contact;
+        $formContact = $this->createForm(ContactType::class,$contact);
+        
+        
+        $formContact->handleRequest($request);
+        if($formContact->isSubmitted() && $formContact->isValid())
+        {
+        $entityManger = $this->getDoctrine()->getManager();
+        $entityManger->persist($contact);
+        $entityManger->flush();
 
-     return $this->redirectToRoute('index');
-    }                   
+        return $this->redirectToRoute('index');
+        }                   
 
-    return $this->render('contact/form-add.html.twig',[
-         'formContact' =>$formContact->createView()
-    ]);
+        return $this->render('contact/form-add.html.twig',[
+            'formContact' =>$formContact->createView()
+        ]);
+    }
 
-
-
-
-    
-  } 
-}  
+} 
 

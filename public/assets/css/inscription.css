@@ -6,17 +6,21 @@ h1{
     color: rgb(91, 76, 141);
 }
 
-.form input[type="text"], input[type="number"] {
-    width: 300px;
+.form .champs[type="text"], .champs[type="number"] {
+    width: 100%;
 }
 
 .form button[type="submit"]{
     background-color:rgb(91, 76, 141);
-
 }
 
 .champs {
     color:rgb(91, 76, 141);
+}
+
+.champLine:nth-child(1) {
+    grid-area: 1 / 2 / 2 / 6;
+    margin-right: -2px;
 }
 
 #connexCompte {
