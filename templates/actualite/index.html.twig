@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ActualiteController!{% endblock %}
+
+{% block body %}
+ 
+
+{% for actualites in actualite %}
+
+
+<div id="actualites">
+        <h3>Les dernières actualités artistiques</h3>
+        
+        <div id="bloc_actu">
+
+            <div class="article_actu">
+               <!-- liens vers une actualite -->
+             <a href="{{ path('actualite_show', {id:actualites.id}) }} " target="_blank"><img src="{{actualites.image}} "></a> 
+                <div class="titre_actu">
+                    <h5>{{actualites.titre}}</h5>
+
+                    <p>{{actualites.contenu}} </p>
+                </div>
+            
+             <p>{{actualites.legende}} </p>
+             
+            </div>
+            
+          
+            <div class="article_actu">
+                <div class="titre_actu">
+                    <h5>Ici le titre de l'article</h5>
+                </div>
+            </div>
+
+            <div class="article_actu">
+                <div class="titre_actu">
+                    <h5>Ici le titre de l'article</h5>
+                </div>
+            </div>
+
+        </div>
+        
+</div>
+
+{% endfor %}
+
+{% endblock %}
