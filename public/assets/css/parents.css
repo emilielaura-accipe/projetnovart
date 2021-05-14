@@ -1,0 +1,34 @@
+#parents{
+    margin: 0 auto;
+    padding-top: 200px;
+    width: 47%;
+    font-family: 'Router-Book';
+    color: rgb(29, 58, 97);
+}
+
+#parents h1{
+    font-family: 'Router-Bold';
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#parents h2{
+    font-family: 'Mathlete-Bulky';
+    letter-spacing: 3.5px;
+    font-size: 35px;
+}
+
+#parents p {
+    font-size: 20px;
+}
+
+#parents li{
+    font-size: 20px;
+    padding-bottom: 8px;
+    list-style-type: none;
+}
+
+#parents span{
+    font-family: 'Router-Bold';
+}

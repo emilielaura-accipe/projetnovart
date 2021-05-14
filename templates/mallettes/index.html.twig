@@ -2,11 +2,15 @@
 
 {% block title %}Nos Mallettes{% endblock %}
 
+{% block stylesheets %}
+    <link href="{{ asset('assets/css/mallettes.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block javascript %} <script src="{{ asset('assets/js/mallettes.js') }}"></script> {% endblock %}
+
 {% block body %}
 
 <div id="containerMal">
-
-    <h1></h1>
 
     <div id="mallettes">
         <div class="itemMenu"><span class="animLink"><a href="">L'art abstrait</a></span></div>

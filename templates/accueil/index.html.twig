@@ -2,6 +2,14 @@
 
 {% block title %}Accueil{% endblock %}
 
+{% block stylesheets %}
+    <link href="{{ asset('assets/css/accueil.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block javascript %}
+    <script src="{{ asset('assets/js/accueil.js') }}"></script>
+{% endblock %}
+
 {% block body %}
 
     <!-- DIV Header -->
@@ -92,10 +100,12 @@
         </div>
 
         <div id="info_footer">
-            <li>Contact</li>
-            <li>Parents</li>
-            <li>CGV / CGU</li>
-            <li>Sécurité et prudence en ligne</li>
+            <li><a href="">Qui sommes-nous ?</a></li>
+            <li><a href="{{ path('contact') }}">Contact</a></li>
+            <li><a href="{{ path('parents') }}">Parents</a></li>
+            <li><a href="">Termes d'utilisation</a></li>
+            <li><a href="">Confidentialité</a></li>
+            <li><a href="">Sécurité et prudence en ligne</a></li>
         </div>
     </footer>
 
