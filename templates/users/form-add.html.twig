@@ -5,51 +5,59 @@
 
 {% block body%}
 
-   <h1> Formulaire d'inscription </h1>
-    
-   {{ form_start(formUser) }} 
-   
-          <div class="row">
-            <div class="col">
-            {{form_label (formUser.nom,'Votre nom')}}
+   <div id="form_inscrip">
+
+      <h1> Formulaire d'inscription </h1>
+
+      {{ form_start(formUser) }} 
+
+         <div class="champ_line">
+            <div class="champs">
+               {{ form_label(formUser.nom,'Votre nom')}}
                {{ form_widget(formUser.nom) }}
             </div>  
-            <div class="col">
-            {{form_label (formUser.prenom,'Votre prénom')}}
+
+            <div class="champs">
+               {{ form_label(formUser.prenom,'Votre prénom')}}
                {{ form_widget(formUser.prenom) }}
             </div>  
-        </div>
-        <br>
-        <div class="row">
-              <div class="col">
-            {{form_label (formUser.email,'Votre email')}}
-               {{ form_widget(formUser.email) }}
-            </div> 
-         <div class="col">
-            {{form_label (formUser.password,'Votre mot de pass')}}
-               {{ form_widget(formUser.password) }}
-            </div> 
          </div>
-         <br>
-        <div class="row">
-              <div class="col">
-            {{form_label (formUser.voie,'Votre voie')}}
-               {{ form_widget(formUser.voie) }}
-            </div> 
-         <div class="col">
-            {{form_label (formUser.code_postal,'Votre code postal')}}
+
+         <div class="champs">
+            {{ form_label(formUser.email,'Votre email')}}
+            {{ form_widget(formUser.email) }}
+         </div> 
+
+         <div class="champs">
+            {{ form_label(formUser.password,'Votre mot de passe')}}
+            {{ form_widget(formUser.password) }}
+         </div> 
+
+         <div class="champs">
+            {{form_label (formUser.voie,'Voie')}}
+            {{ form_widget(formUser.voie) }}
+         </div>
+
+         <div class="champ_line">
+            <div class="champs">
+               {{form_label (formUser.code_postal,'Code postal')}}
                {{ form_widget(formUser.code_postal) }}
             </div> 
-              <div class="col">
-            {{form_label (formUser.ville,'Votre ville')}}
+
+            <div class="champs">
+               {{form_label (formUser.ville,'Ville')}}
                {{ form_widget(formUser.ville) }}
             </div> 
          </div>
-        
-       
-       <button type="submit" class="btn btn-dark btn-sm">Enregistrer</button>
-    {{ form_end(formUser) }}  
-       
+         
+         <button type="submit" class="">Enregistrer</button>
 
+      {{ form_end(formUser) }} 
+
+      <div id="">
+         <a href="">Infos RGBD à ajouter</a>
+      </div>
+
+   </div>     
 
 {% endblock %}

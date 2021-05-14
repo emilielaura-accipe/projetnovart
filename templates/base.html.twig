@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
+  <head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Novart{% endblock %}</title>
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
+    <!-- Lien css Polices -->
+    <link href="{{ asset('assets/css/polices.css') }}" rel="stylesheet" />
 
-        <!-- Lien css Accueil -->
-        <link href="{{ asset('assets/css/accueil.css') }}" rel="stylesheet" />
+    <!-- Lien css Accueil -->
+    <link href="{{ asset('assets/css/accueil.css') }}" rel="stylesheet" />
 
-        <!-- Lien pour îcones Fontawesome -->
-        <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <!-- Lien css Login -->
+    <link href="{{ asset('assets/css/login.css') }}" rel="stylesheet" />
 
-    </head>
-    <body>
-    {% block body %}{% endblock %}
-        
+    <!-- Lien css Contact -->
+    <link href="{{ asset('assets/css/contact.css') }}" rel="stylesheet" />
+
+    <!-- Lien css Inscription -->
+    <link href="{{ asset('assets/css/inscription.css') }}" rel="stylesheet" />
+
+    <!-- Lien css Nos Mallettes -->
+    <link href="{{ asset('assets/css/mallettes.css') }}" rel="stylesheet" />
+
+    <!-- Lien pour îcones Fontawesome -->
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    {{ include('menu.html.twig') }}
+
+    <!-- Logo Novart à coder ici -->
+
+    {% block body %}
+    {% endblock %}
 
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <!-- Lien Green Sock -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <!-- Lien accueil.js -->
+    <script src="{{ asset('assets/js/accueil.js') }}"></script>
+
+    <!-- Lien mallettes.js -->
+    <script src="{{ asset('assets/js/mallettes.js') }}"></script>
 
     <!-- Lien accueil.js -->
       <script src="{{ asset('assets/js/accueil.js') }}"></script>

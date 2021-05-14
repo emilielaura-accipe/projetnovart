@@ -1,0 +1,22 @@
+/* Page d'une mallette */
+
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Mise en place du logo */
+#logo_header{
+    padding-top: 50px;
+    text-align: center;
+}
+
+/* A voir pour le paragraphe */
+
+p{
+    color: rgb(29, 58, 97);
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
