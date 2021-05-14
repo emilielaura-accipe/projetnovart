@@ -1,16 +1,3 @@
-body{
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    /* height: 100%; */
-}
-
-/* Gestion des liens du site */
-a{
-    text-decoration: none;
-}
-
-
 /* DIV Header */
 header{
     width: 100%;
@@ -37,62 +24,6 @@ header h1{
 /* Fin DIV Header */
 
 
-/* DIV Menu */
-.btn{
-    position: fixed;
-    left: 40px;
-    top: 50px;
-    text-decoration: none;
-    border-radius: 5px;
-    width: 90px;
-    height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgb(240, 104, 83);
-    z-index: 1000;
-}
-
-.menuIcon{
-    width: 40px;
-}
-
-.conteneurMenu{
-    background: rgb(250, 177, 93);
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-.listeMenu{
-    margin-top: 220px;
-    margin-left: 60px;
-    font-size: 35px;
-    font-family: 'Router-Book';
-    line-height: 1.2;
-    display: flex;
-    flex-direction: column;
-}
-
-.MenuListItem{
-    position: relative;
-    margin-top: 20px;
-    color: rgb(252, 235, 203);
-    list-style-type: none;
-    cursor: pointer;
-    opacity: 0;
-    transform: translateX(-100px);
-    cursor: pointer;
-}
-
-.MenuListItem:hover{
-    color: rgb(251, 219, 185);
-}
-/* Fin DIV Menu */
-
-
 /* DIV Présentation */
 #presentation{
     background-color: rgb(250, 177, 93);
@@ -104,14 +35,6 @@ header h1{
     padding: 50px;
     width: 65%;
     margin: 0 auto;
-}
-
-#entete_pres h2{
-    font-size: 50px;
-    font-family: 'Router-Bold';
-    line-height: 1.2;
-    color: rgb(29, 58, 97);
-    margin-top: 50px;
 }
 
 #elements_pres{
