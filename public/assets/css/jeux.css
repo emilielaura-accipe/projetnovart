@@ -1,9 +1,6 @@
 /* Page d'une mallette */
 body{
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
+    height: 130vh;
     background-color: rgb(252, 235, 203);
 }
 
@@ -14,10 +11,6 @@ body{
     width: 50%;
 }
 
-#texte p{
-    padding-top: 5%;
-    font-size: 25px;
-}
 /* Les jeux A voir les Typo */
 #jeux{
     display: flex;
@@ -28,27 +21,15 @@ body{
     padding-top: 5%;
 }
 
-.puzzle{
-    width: 400px;
+.blocJeu{
+    width: 30%;
     height: 500px;
     background-color: rgb(255, 255, 255);
 }
 
-.memory{
-    width: 400px;
-    height: 500px;
-    background-color: rgb(255, 255, 255);
-}
-
-.coloriage{
-    width: 400px;
-    height: 500px;
-    background-color: rgb(255, 255, 255);
-}
-
-.puzzle p{
+.blocJeu p{
     height: 80px;
-    width: 300px;
+    width: 70%;
     background-color: rgb(91, 76, 141);
     text-align: center;
     margin: 0 auto;
@@ -57,27 +38,34 @@ body{
     color: rgb(255, 226, 193);
     padding-top: 40px;
 }
-
-.memory p{
-    height: 80px;
-    width: 300px;
-    background-color: rgb(91, 76, 141);
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 420px;
-    font-size: 25px;
-    color: rgb(255, 226, 193);
-    padding-top: 40px;
+button{
+    position: fixed;
+    left: 40px;
+    top: 50px;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: rigth;
+    justify-content: center;
+    background: rgb(240, 104, 83);
+    z-index: 1000;
 }
-
-.coloriage p{
-    height: 80px;
-    width: 300px;
-    background-color: rgb(91, 76, 141);
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 420px;
-    font-size: 25px;
-    color: rgb(255, 226, 193);
-    padding-top: 40px;
+.btn{
+    position: fixed;
+    left: 40px;
+    top: 50px;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(240, 104, 83);
+    z-index: 1000;
+}
+.fas{
+    font-size: 40px;
 }

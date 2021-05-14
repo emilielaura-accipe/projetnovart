@@ -1,3 +1,12 @@
+h2{
+    font-size: 2.7vw;
+    line-height: 1.3;
+    font-family: 'Router-Bold';
+    margin-top: 50px;
+    color: rgb(29, 58, 97);
+}
+
+
 /* DIV Header */
 header{
     width: 100%;
@@ -7,12 +16,12 @@ header{
     padding: 0;
 }
 
-#logo_header{
+#logoHeader{
     padding-top: 75px;
     text-align: center;
 }
 
-header h1{
+h1{
     font-size: 75px;
     letter-spacing: 8px;
     font-family: 'Mathlete-Bulky';
@@ -30,23 +39,23 @@ header h1{
     min-height: 130vh;
 }
 
-#entete_pres{
+#entetePres{
     padding: 50px;
     width: 65%;
     margin: 0 auto;
 }
 
-#elements_pres{
+#elementsPres{
     display: flex;
     justify-content: space-around;
 }
 
-.picto_pres{
+.pictoPres{
     display: block;
     flex-direction: column;
 }
 
-.picto_pres h4{
+h3{
     font-size: 50px;
     letter-spacing: 3px;
     line-height: 1.1;
@@ -55,7 +64,7 @@ header h1{
     margin-bottom: 30px;
 }
 
-.picto_pres li {
+.pictoPres li {
     font-family: 'Router-Book';
     font-size: 28px;
     line-height: 1.5;
@@ -63,7 +72,7 @@ header h1{
     list-style-type: none;
 }
 
-.picto_pres i{
+.pictoPres i{
     color: rgb(235, 92, 70);
 }
 /* Fin DIV Présentation */
@@ -77,35 +86,28 @@ header h1{
     padding: 50px;
 }
 
-#actualites h3{
-    font-size: 3vw;
-    font-family: 'Router-Bold';
-    margin-top: 50px;
-    color: rgb(29, 58, 97);
-}
-
-#bloc_actu{
+#blocActu{
     display: flex;
     justify-content: space-around;
     padding-top: 55px;
 }
 
-.article_actu{
-    width: 400px;
+.articleActu{
+    width: 30%;
     height: 500px;
     background-color: rgb(255, 255, 255);
 }
 
-.titre_actu{
+.titreActu{
     height: 120px;
-    width: 300px;
+    width: 70%;
     background-color: rgb(29, 58, 97);
     text-align: center;
     margin: 0 auto;
     margin-top: 420px;
 }
 
-.titre_actu h5{
+h5{
     font-size: 25px;
     font-family: 'Router-Book';
     color: rgb(252, 235, 203);
@@ -114,36 +116,5 @@ header h1{
 /* Fin DIV Actualités */
 
 
-/* Début DIV Footer */
-footer{
-    height: 400px;
-    background-color: rgb(68, 133, 120);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
 
-#info_footer{
-    font-size: 22px;
-    font-family: 'Router-Book';
-    color: rgb(252, 235, 203);
-    line-height: 1.7;
-    list-style-type: none;
-}
-
-#social_footer{
-    display: flex;
-    list-style-type: none;
-}
-
-#social_footer li a{
-    color: rgb(252, 235, 203);
-    padding-left: 20px;
-}
-
-#info_footer li a {
-    color: rgb(252, 235, 203);  
-}
-/* Fin DIV Footer */
 

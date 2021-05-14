@@ -14,7 +14,7 @@
 
       {{ form_start(formUser) }} 
 
-         <div class="champ_line">
+         <div class="champLine">
             <div class="champs">
                {{ form_label(formUser.nom,'Votre nom')}}
                {{ form_widget(formUser.nom) }}
@@ -41,7 +41,7 @@
             {{ form_widget(formUser.voie) }}
          </div>
 
-         <div class="champ_line">
+         <div class="champLine">
             <div class="champs">
                {{form_label (formUser.code_postal,'Code postal')}}
                {{ form_widget(formUser.code_postal) }}
@@ -56,6 +56,13 @@
          <button type="submit" class="">Enregistrer</button>
 
       {{ form_end(formUser) }} 
+
+      <div id="connexCompte">
+         <span>Vous avez déjà un compte ?</span>
+         <a href="">Connectez-vous</a>
+      </div>
+
+      <hr>
 
       <div id="">
          <a href="">Infos RGBD à ajouter</a>

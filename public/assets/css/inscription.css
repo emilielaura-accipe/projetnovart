@@ -1,3 +1,7 @@
+body{
+    height: 130vh;
+}
+
 h1{
     color: rgb(91, 76, 141);
 }
@@ -13,6 +17,23 @@ h1{
 
 .champs {
     color:rgb(91, 76, 141);
+}
+
+#connexCompte {
+    font-size: 16px;
+    padding: 10px 0px;
+    text-align: center;
+    color:rgb(91, 76, 141);
+}
+
+#connexCompte a{
+    text-decoration: underline;
+}
+
+hr{
+    padding: 0.7px;
+    background-color: rgb(91, 76, 141);
+    border: none;
 }
 
 /* .champs:nth-child(4) {

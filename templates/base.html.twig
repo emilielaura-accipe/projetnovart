@@ -10,6 +10,9 @@
     <!-- Lien css commun à tout le site -->
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet" />
 
+    <!-- Lien css footer -->
+    <link href="{{ asset('assets/css/footer.css') }}" rel="stylesheet" />
+
     <!-- Lien css Polices -->
     <link href="{{ asset('assets/css/polices.css') }}" rel="stylesheet" />
 
@@ -23,8 +26,10 @@
     <!-- Logo Novart à coder ici -->
 
     {% block body %}
-    {% endblock %}
 
+    {% block footer %}{% endblock %}
+
+    {% endblock %}
 
     {% block javascript %}{% endblock %}
 
