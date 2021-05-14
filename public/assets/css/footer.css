@@ -1,0 +1,30 @@
+footer{
+    height: 400px;
+    background-color: rgb(68, 133, 120);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#infoFooter{
+    font-size: 22px;
+    font-family: 'Router-Book';
+    color: rgb(252, 235, 203);
+    line-height: 1.7;
+    list-style-type: none;
+}
+
+#socialFooter{
+    display: flex;
+    list-style-type: none;
+}
+
+#socialFooter li a{
+    color: rgb(252, 235, 203);
+    padding-left: 20px;
+}
+
+#infoFooter li a {
+    color: rgb(252, 235, 203);  
+}

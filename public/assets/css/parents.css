@@ -1,3 +1,4 @@
+
 #parents{
     margin: 0 auto;
     padding-top: 200px;
@@ -6,29 +7,37 @@
     color: rgb(29, 58, 97);
 }
 
-#parents h1{
-    font-family: 'Router-Bold';
-    font-size: 50px;
-    text-align: center;
-    padding-bottom: 50px;
+h1 {
+    padding-bottom: 70px;
 }
 
-#parents h2{
+h2{
     font-family: 'Mathlete-Bulky';
     letter-spacing: 3.5px;
+    line-height: 0;
     font-size: 35px;
+    text-align: left;
 }
 
-#parents p {
-    font-size: 20px;
+p {
+    font-size: 18px;
+    padding-bottom: 35px;
 }
 
-#parents li{
+li{
     font-size: 20px;
     padding-bottom: 8px;
     list-style-type: none;
 }
 
-#parents span{
+li:nth-child(6) {
+    padding-bottom: 35px;
+}
+
+span{
     font-family: 'Router-Bold';
+}
+
+.explic:nth-child(7){
+    padding-bottom: 100px;
 }
