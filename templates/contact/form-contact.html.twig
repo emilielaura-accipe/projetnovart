@@ -5,36 +5,39 @@
 
 {% block body%}
 
-  <div id="form_contact">
+   <div id="form_contact">
      
-        <h1> Formulaire de contact </h1>
-    
-        {{ form_start(formContact) }} 
+      <h1> Formulaire de contact </h1>
    
-         <div class="champ_line">
-            <div class="champs">
+      {{ form_start(formContact) }} 
+
+      <div class="champLine">
+         <div class="champs">
             {{form_label (formContact.nom,'Votre nom')}}
-               {{ form_widget(formContact.nom) }}
-            </div>  
-            <div class="champs">
-            {{form_label (formContact.prenom,'Votre prénom')}}
-               {{ form_widget(formContact.prenom) }}
-            </div>  
-        </div>
-    
-        <div class="champs">
-               {{form_label (formContact.email,'Votre email')}}
-               {{ form_widget(formContact.email) }}
-            </div>
-            <br> 
-            <div class="col">
-               {{form_label (formContact.message,'Votre message')}}
-               {{ form_widget(formContact.message) }}
-            </div> 
+            {{ form_widget(formContact.nom) }}
          </div>
-         
-         <button type="submit" class="btn btn-dark btn-sm">Enregistrer</button>
-          {{ form_end(formContact) }}  
+
+         <div class="champs">
+            {{form_label (formContact.prenom,'Votre prénom')}}
+            {{ form_widget(formContact.prenom) }}
+         </div>  
+      </div>
+   
+      <div class="champs">
+         {{form_label (formContact.email,'Votre email')}}
+         {{ form_widget(formContact.email) }}
+      </div>
+
+      <div class="champs">
+         {{form_label (formContact.message,'Votre message')}}
+         {{ form_widget(formContact.message) }}
+      </div> 
+      
+      <button type="submit" class="">Enregistrer
+         {{ form_end(formContact) }}
+      </button>
+
+   </div>
       
 
 {% endblock %}

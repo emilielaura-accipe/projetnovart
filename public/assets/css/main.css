@@ -79,6 +79,8 @@ h1{
 h2{
     font-size: 20px;
     font-family: 'Router-Book';
+    color: rgb(29, 58, 97);
+    text-align: center;
 }
 /* FIN TITRES */
 
@@ -98,7 +100,7 @@ h2{
     font-size: 18px;
 }
 
-.champ_line{
+.champLine{
     display: flex;
     justify-content: space-between;
 }
