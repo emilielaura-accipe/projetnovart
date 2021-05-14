@@ -27,7 +27,7 @@ window.onload = function(){
     MenuListItem.forEach(item => item.addEventListener('click', () => {
         i--;
         TL.reverse();
-        iconeMenu.src = 'menu.svg';
+        iconeMenu.src = 'assets/images/menu.svg';
     }))
 
     
