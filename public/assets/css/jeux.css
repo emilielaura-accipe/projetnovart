@@ -81,3 +81,34 @@ body{
     color: rgb(255, 226, 193);
     padding-top: 40px;
 }
+button{
+    position: fixed;
+    left: 40px;
+    top: 50px;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: rigth;
+    justify-content: center;
+    background: rgb(240, 104, 83);
+    z-index: 1000;
+}
+.btn{
+    position: fixed;
+    left: 40px;
+    top: 50px;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(240, 104, 83);
+    z-index: 1000;
+}
+.fas{
+    font-size: 40px;
+}
