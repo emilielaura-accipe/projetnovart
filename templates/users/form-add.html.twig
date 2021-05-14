@@ -2,12 +2,15 @@
 
 {% block title %} Inscription {% endblock %}
 
+{% block stylesheets %}
+    <link href="{{ asset('assets/css/inscription.css') }}" rel="stylesheet" />
+{% endblock %}
 
 {% block body%}
 
    <div id="form_inscrip">
 
-      <h1> Formulaire d'inscription </h1>
+      <h1>Formulaire d'inscription</h1>
 
       {{ form_start(formUser) }} 
 

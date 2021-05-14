@@ -4,26 +4,16 @@
     <meta charset="UTF-8">
     <title>{% block title %}Novart{% endblock %}</title>
 
+    <!-- Lien pour îcones Fontawesome -->
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+    <!-- Lien css commun à tout le site -->
+    <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet" />
+
     <!-- Lien css Polices -->
     <link href="{{ asset('assets/css/polices.css') }}" rel="stylesheet" />
 
-    <!-- Lien css Accueil -->
-    <link href="{{ asset('assets/css/accueil.css') }}" rel="stylesheet" />
-
-    <!-- Lien css Login -->
-    <link href="{{ asset('assets/css/login.css') }}" rel="stylesheet" />
-
-    <!-- Lien css Contact -->
-    <link href="{{ asset('assets/css/contact.css') }}" rel="stylesheet" />
-
-    <!-- Lien css Inscription -->
-    <link href="{{ asset('assets/css/inscription.css') }}" rel="stylesheet" />
-
-    <!-- Lien css Nos Mallettes -->
-    <link href="{{ asset('assets/css/mallettes.css') }}" rel="stylesheet" />
-
-    <!-- Lien pour îcones Fontawesome -->
-    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    {% block stylesheets %}{% endblock %}
 
   </head>
 
@@ -36,15 +26,15 @@
     {% endblock %}
 
 
+    {% block javascript %}{% endblock %}
+
     <!-- Lien Green Sock -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 
     <!-- Lien accueil.js -->
-    <script src="{{ asset('assets/js/accueil.js') }}"></script>
+      <script src="{{ asset('assets/js/accueil.js') }}"></script>
 
-    <!-- Lien mallettes.js -->
-    <script src="{{ asset('assets/js/mallettes.js') }}"></script>
-
+      
   </body>
 
 </html>

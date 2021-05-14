@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ActualiteController!{% endblock %}
+
+{% block body %}
+ 
+
+ 
+    <div id="actualites">
+        <h1>Les dernières actualités artistiques</h1>
+        
+        <div id="bloc_actu">
+                    
+             
+            <div class="article_actu">
+                <img src="{{actualite.image}} ">
+                 <p>{{actualite.legende}} </p>
+                <div class="titre_actu">
+                    <h5>{{actualite.titre}}</h5>
+                   <p>{{actualite.contenu}} </p>
+                </div>
+               <a class="btn btn-primary btn-lg" href="" role="button">Retour page acceuil</a>
+
+            </div>
+            
+    </div>
+
+ 
+
+{% endblock %}
+                   
