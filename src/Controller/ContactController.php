@@ -20,11 +20,9 @@ class ContactController extends AbstractController
         ]);
     }
 
-}
     /**
-    * @Route("/contact/add", name="contact_add")
-    */
-
+     * @Route("/contact/add", name="contact_add")
+     */
     public function add(Request $request)
     {
     $contact = new Contact;
