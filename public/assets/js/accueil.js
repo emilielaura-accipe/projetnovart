@@ -16,11 +16,11 @@ window.onload = function(){
         if(i === 0){
             i++;
             TL.play(); // lance la Timeline
-            iconeMenu.src = 'croix.svg'; // change la source
+            iconeMenu.src = 'assets/images/croix.svg'; // change la source
         } else {
-            i--; // sinon, si i différent de 0 (=1 car un tour de boucle)
+            i--;
             TL.reverse(); // Timeline se joue en sens inverse
-            iconeMenu.src = 'menu.svg'; 
+            iconeMenu.src = 'assets/images/menu.svg'; 
         }
     })
 
