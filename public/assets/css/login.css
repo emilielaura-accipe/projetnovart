@@ -1,43 +1,13 @@
-#form_connex{
-    margin: 0 auto;
-    padding-top: 200px;
-    width: 30%;
-    font-family: 'Router-Book';
+h1{
     color: rgb(68, 133, 120);
 }
 
-#form_connex h1{
-    font-family: 'Router-Bold';
-    font-size: 50px;
+.champs {
+    color: rgb(68, 133, 120);   
 }
 
-#form_connex .champs{
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
-    font-size: 18px;
-}
-
-#form_connex input[type="email"], input[type="password"] {
-    padding: 15px;
-    border-radius: 7px;
-    border: none;
-}
-
-#form_connex label{
-    padding-bottom: 10px;
-}
-
-#form_connex button[type="submit"]{
-    width: 100%;
-    padding: 10px;
-    font-size: 20px;
-    font-family: 'Router-Book';
+.form button[type="submit"]{
     background-color:rgb(68, 133, 120);
-    color: rgb(252, 235, 203);
-    border-radius: 7px;
-    margin: 15px 0px;
-    border: none;
 }
 
 #mdp_oubli, #crea_compte{
@@ -54,7 +24,11 @@
     text-decoration: underline;
 }
 
-#form_connex hr{
+#crea_compte span {
+    color: rgb(68, 133, 120);
+}
+
+.form hr{
     padding: 0.7px;
     background-color: rgb(68, 133, 120);
     border: none;

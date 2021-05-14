@@ -1,49 +1,18 @@
-#form_inscrip{
-    height: 110vh;
-    margin: 0 auto;
-    padding-top: 200px;
-    width: 40%;
-    font-family: 'Router-Book';
+h1{
     color: rgb(91, 76, 141);
 }
 
-#form_inscrip h1{
-    font-family: 'Router-Bold';
-    font-size: 50px;
-}
-
-#form_inscrip .champs{
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
-    font-size: 18px;
-}
-
-.champ_line{
-    display: flex;
-    justify-content: space-between;
-}
-
-#form_inscrip input{
-    padding: 15px;
-    border-radius: 7px;
-    border: none;
-}
-
-#form_inscrip input[type="text"], input[type="number"] {
+.form input[type="text"], input[type="number"] {
     width: 300px;
 }
 
-#form_inscrip button[type="submit"]{
-    width: 100%;
-    padding: 10px;
-    font-size: 20px;
-    font-family: 'Router-Book';
+.form button[type="submit"]{
     background-color:rgb(91, 76, 141);
-    color: rgb(252, 235, 203);
-    border-radius: 7px;
-    margin: 15px 0px;
-    border: none;
+
+}
+
+.champs {
+    color:rgb(91, 76, 141);
 }
 
 /* .champs:nth-child(4) {
