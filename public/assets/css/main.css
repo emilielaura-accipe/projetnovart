@@ -5,12 +5,12 @@ body{
     background-color: rgb(252, 235, 203);
 }
 
-/* Gestion des liens du site */
+/* LIENS */
 a{
     text-decoration: none;
 }
 
-/* DIV Menu */
+/* MENU */
 .btn{
     position: fixed;
     left: 40px;
@@ -63,7 +63,8 @@ a{
 .MenuListItem:hover{
     color: rgb(251, 219, 185);
 }
-/* Fin DIV Menu */
+/* Fin MENU */
+
 
 /* TITRES */
 h1{
@@ -72,4 +73,56 @@ h1{
     line-height: 1.2;
     color: rgb(29, 58, 97);
     margin-top: 50px;
+    text-align: center;
 }
+
+h2{
+    font-size: 20px;
+    font-family: 'Router-Book';
+    color: rgb(29, 58, 97);
+    text-align: center;
+}
+/* FIN TITRES */
+
+
+/* FORMULAIRES */
+.form{
+    margin: 0 auto;
+    width: 40%;
+    font-family: 'Router-Book';
+    padding-top: 150px;
+}
+
+.champs{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
+.champLine{
+    display: flex;
+    justify-content: space-between;
+}
+
+label{
+    padding-bottom: 10px;
+}
+
+.form input[type="email"], input[type="password"], input[type="text"], input[type="number"] {
+    padding: 15px;
+    border-radius: 7px;
+    border: none;
+}
+
+.form button[type="submit"]{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Router-Book';
+    color: rgb(252, 235, 203);
+    border-radius: 7px;
+    margin: 15px 0px;
+    border: none;
+}
+/* FIN FORMULAIRES */
