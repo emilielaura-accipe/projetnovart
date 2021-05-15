@@ -13,8 +13,19 @@ class JeuxController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('jeux/index.html.twig', [
+        return $this->render('jeux/jeux.html.twig', [
             'controller_name' => 'JeuxController',
         ]);
     }
+
+    /**
+     * @Route("/puzzle", name="puzzle")
+     */
+    public function puzzle(): Response
+    {
+        return $this->render('jeux/puzzle/puzzle.html.twig', [
+            'controller_name' => 'DefaultController',
+        ]);
+    }
+
 }
