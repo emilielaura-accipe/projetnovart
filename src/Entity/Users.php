@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UsersRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -58,6 +60,21 @@ class Users implements UserInterface
      * @ORM\Column(type="string", length=255)
      */
     private $ville;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Panier::class, mappedBy="user")
+     */
+    private $paniers;
+
+    
+
+    public function __construct()
+    {
+        $this->paniers = new ArrayCollection();
+    }
+
+    
+
 
     public function getId(): ?int
     {
@@ -199,4 +216,41 @@ class Users implements UserInterface
 
         return $this;
     }
+
+    /**
+     * @return Collection|Panier[]
+     */
+    public function getPaniers(): Collection
+    {
+        return $this->paniers;
+    }
+
+    public function addPanier(Panier $panier): self
+    {
+        if (!$this->paniers->contains($panier)) {
+            $this->paniers[] = $panier;
+            $panier->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removePanier(Panier $panier): self
+    {
+        if ($this->paniers->removeElement($panier)) {
+            // set the owning side to null (unless already changed)
+            if ($panier->getUser() === $this) {
+                $panier->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    
+    
+
+   
+    
+    
 }
