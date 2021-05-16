@@ -16,7 +16,7 @@ class PanierController extends AbstractController
     public function index(SessionInterface $sesion,MalletteRepository $malletteRepository)
     {   
         $panier = $sesion->get('panier',[]);
-        $panier = [];
+        $panierWithData = [];
         
         foreach($panier as $id =>$quantity){
             $panierWithData[] = [
