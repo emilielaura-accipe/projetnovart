@@ -1,27 +1,23 @@
 /* DIV Header */
-
-/* header {
-    min-height: 100vh;
-    background-image: url('../images/Kandinsky1.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-} */
-
-header{
+header {
     width: 100%;
-    min-height: 100vh;
-    margin: 0 auto;
-    box-sizing: border-box;
-    background-color: lavender;
+    height: 100%;
 }
 
-#carousel img {
+#logoHeader {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 7%;
+    font-size: 30px;
+}
+
+.slider img {
     width: 100%;
     display: none;
 }
 
-#carousel img.active {
+.slider img.active {
     display: block;
     animation: fade 0.8s;
 }
@@ -35,30 +31,37 @@ header{
     }
 }
 
+.btnCarou {
+    width: 80%;
+    display: flex;
+    position: absolute;
+    left: 12%;
+    bottom: 10vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1{
+    font-size: 5.5vw;
+    letter-spacing: 9px;
+    line-height: 1;
+    font-family: 'Mathlete-Bulky';
+    color: rgb(255, 255, 255);
+    width: 35%;
+}
+
+.btnCarou i {
+    color: rgb(255, 255, 255);
+    font-size: 5vw;
+    cursor: pointer;
+}
+
 h2{
     font-size: 2.7vw;
     line-height: 1.3;
     font-family: 'Router-Bold';
     margin-top: 50px;
     color: rgb(29, 58, 97);
-}
-
-#logoHeader{
-    padding-top: 75px;
-    text-align: center;
-}
-
-h1{
-    font-size: 120px;
-    letter-spacing: 9px;
-    line-height: 1;
-    font-family: 'Mathlete-Bulky';
-    margin: 0 auto;
-    color: rgb(255, 255, 255);
-    position: absolute;
-    left: 25%;
-    right: 25%;
-    bottom: 15%;
 }
 /* Fin DIV Header */
 
@@ -67,7 +70,7 @@ h1{
 #presentation{
     background-color: rgb(252, 235, 203);
     text-align: center;
-    min-height: 130vh;
+    min-height: 123vh;
 }
 
 #entetePres{
@@ -106,6 +109,13 @@ h3{
 .pictoPres i{
     color: rgb(235, 92, 70);
 }
+
+hr {
+    width: 70%;
+    border: 1.5px solid rgb(68, 133, 120);
+    background-color: rgb(68, 133, 120);
+    border-radius: 10px;
+}
 /* Fin DIV Présentation */
 
 
@@ -127,12 +137,21 @@ h3{
     width: 30%;
     height: 500px;
     background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgb(253, 226, 174);
+}
+
+.articleActu:hover {
+    width: 31%;
+    height: 510px;
+    box-shadow: 0 0 25px rgb(251, 219, 158);
 }
 
 .titreActu{
     height: 120px;
     width: 70%;
     background-color: rgb(29, 58, 97);
+    border-radius: 8px;
     text-align: center;
     margin: 0 auto;
     margin-top: 420px;
@@ -143,6 +162,7 @@ h5{
     font-family: 'Router-Book';
     color: rgb(252, 235, 203);
     padding-top: 40px;
+    cursor: pointer;
 }
 /* Fin DIV Actualités */
 

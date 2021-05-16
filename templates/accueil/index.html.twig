@@ -7,31 +7,40 @@
 {% endblock %}
 
 {% block javascript %}
+    <script src="{{ asset('assets/js/menu.js') }}"></script>
     <script src="{{ asset('assets/js/accueil.js') }}"></script>
-    <script src="{{ asset('assets/js/carousel.js') }}"></script>
 {% endblock %}
 
 {% block body %}
 
-    <!-- DIV Header -->
+    <!-- DIV Header (Carousel) -->
     <header>
-        <div id="carousel">
+
+        <div id="logoHeader">
+            <span>ICI LE LOGO NOVART</span>
+        </div>
+
+        <div class="slider">
             <img class="active" src="./assets/images/Kandinsky1.jpg">
             <img src="./assets/images/Picasso.jpg">
             <img src="./assets/images/jr.jpg">
+            <img src="./assets/images/Kandinsky3.jpg">
+        <div>
+
+        <div class="btnCarou">
+            <div class="btnLeft">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+
+            <h1>Apprendre l'art simplement</h1>
+
+            <div class="btnRight">
+                <i class="fas fa-chevron-right"></i>
+            </div>
         </div>
 
-        <div id="btnCarou">
-        <div id="btnLeft"><i class="fas fa-chevron-left"></i></div>
-        <div id="btnRight"><i class="fas fa-chevron-right"></i></div>
-        </div>
-
-        <div id="logoHeader">
-            <p>ICI LE LOGO NOVART</p>
-        </div>
-        
-        <h1>Apprendre l'art simplement</h1>
     </header>
+
 
     <!-- DIV Présentation -->
     <div id="presentation">
@@ -68,6 +77,8 @@
 
         </div>
     </div>
+
+    <hr>
 
     <!-- DIV Actualités -->
     <div id="actualites">

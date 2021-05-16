@@ -26,6 +26,12 @@ a{
     z-index: 1000;
 }
 
+.btn:hover{
+    width: 92px;
+    height: 92px;
+    box-shadow: 0 0 5px rgba(240, 104, 83, 0.548);
+}
+
 .menuIcon{
     width: 40px;
 }

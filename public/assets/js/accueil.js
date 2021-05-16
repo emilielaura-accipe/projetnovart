@@ -1,35 +1,35 @@
-window.onload = function(){
+const carou = document.querySelectorAll('img');
+const nbSlide = carou.length;
+const suivant = document.querySelector('.btnRight');
+const precedent = document.querySelector('.btnLeft');
+let count = 0 ;
 
-    const btn = document.querySelector('.btn');
-    const menu = document.querySelector('.conteneurMenu');
-    const MenuListItem = document.querySelectorAll('.MenuListItem');
-    const iconeMenu = document.querySelector('.menuIcon');
-    let i = 0;
+function slideSuivante() {
+    carou[count].classList.remove('active');
 
-    const TL = new TimelineMax({paused: true});
+    if(count < nbSlide - 1) {
+        count++;
+    }
+    else {
+        count = 1;
+    }
 
-    TL
-    .to(menu,1,{width:'25%'})
-    .staggerTo(MenuListItem, 0.3,{opacity: 1, x: 0}, 0.2, '-=0.75');
+    carou[count].classList.add('active');
+}
+suivant.addEventListener('click', slideSuivante)
 
-    btn.addEventListener('click', () => {
-        if(i === 0){
-            i++;
-            TL.play(); // lance la Timeline
-            iconeMenu.src = 'assets/images/croix.svg'; // change la source
-        } else {
-            i--;
-            TL.reverse(); // Timeline se joue en sens inverse
-            iconeMenu.src = 'assets/images/menu.svg'; 
-        }
-    })
 
-    MenuListItem.forEach(item => item.addEventListener('click', () => {
-        i--;
-        TL.reverse();
-        iconeMenu.src = 'assets/images/menu.svg';
-    }))
+function slidePrecedente() {
+    carou[count].classList.remove('active');
 
-    
+    if(count > 1) {
+        count--;
+    }
+    else {
+        count = nbSlide - 1;
+    }
 
-} 
+    carou[count].classList.add('active');
+
+}
+precedent.addEventListener('click', slidePrecedente)
