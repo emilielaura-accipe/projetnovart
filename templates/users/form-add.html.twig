@@ -14,17 +14,16 @@
 
       {{ form_start(formUser) }} 
 
-         <div class="champLine">
-            <div class="champs">
-               {{ form_label(formUser.nom,'Votre nom')}}
-               {{ form_widget(formUser.nom) }}
-            </div>  
+         <div class="champs">
+            {{ form_label(formUser.nom,'Votre nom')}}
+            {{ form_widget(formUser.nom) }}
+         </div>  
 
-            <div class="champs">
-               {{ form_label(formUser.prenom,'Votre prénom')}}
-               {{ form_widget(formUser.prenom) }}
-            </div>  
-         </div>
+         <div class="champs">
+            {{ form_label(formUser.prenom,'Votre prénom')}} 
+            {{ form_widget(formUser.prenom) }}
+         </div>  
+
 
          <div class="champs">
             {{ form_label(formUser.email,'Votre email')}}
@@ -41,17 +40,15 @@
             {{ form_widget(formUser.voie) }}
          </div>
 
-         <div class="champLine">
-            <div class="champs">
-               {{form_label (formUser.code_postal,'Code postal')}}
-               {{ form_widget(formUser.code_postal) }}
-            </div> 
+         <div class="champs">
+            {{form_label (formUser.code_postal,'Code postal')}}
+            {{ form_widget(formUser.code_postal) }}
+         </div> 
 
             <div class="champs">
                {{form_label (formUser.ville,'Ville')}}
                {{ form_widget(formUser.ville) }}
             </div> 
-         </div>
          
          <button type="submit" class="">Enregistrer</button>
 
@@ -63,6 +60,11 @@
       </div>
 
 
-   </div>     
+   </div>  
+
+   <!-- DIV Footer -->
+   {% block footer %}
+      {{ include('footer.html.twig') }}
+   {% endblock %}   
 
 {% endblock %}

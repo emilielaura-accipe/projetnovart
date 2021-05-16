@@ -1,13 +1,5 @@
-body{
-    height: 130vh;
-}
-
 h1{
     color: rgb(91, 76, 141);
-}
-
-.form .champs[type="text"], .champs[type="number"] {
-    width: 100%;
 }
 
 .form button[type="submit"]{
@@ -35,6 +27,3 @@ hr{
     border: none;
 }
 
-/* .champs:nth-child(4) {
-    width: 500px;
-} */

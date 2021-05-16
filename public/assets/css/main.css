@@ -91,6 +91,7 @@ h2{
     width: 40%;
     font-family: 'Router-Book';
     padding-top: 150px;
+    margin-bottom: 100px;;
 }
 
 .champs{
@@ -101,8 +102,10 @@ h2{
 }
 
 .champLine{
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    padding-bottom: 20px;
+    font-size: 18px;
 }
 
 label{
