@@ -1,0 +1,29 @@
+#EnteteMemo {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#memory {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 50px;
+}
+
+#memory img {
+    width: 250px;
+    height: 250px;
+    padding-bottom: 40px;
+}
+
+span {
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+    background-color: rgb(68, 133, 120);
+    margin-bottom: 40px;
+    text-align: center;
+    color: rgb(252, 235, 203);
+}
+
