@@ -6,13 +6,13 @@
 {% block javascript %}
     <script src="{{ asset('assets/js/puzzle.js') }}"></script>
 {% endblock %}
-{# width="600" height="600" width="405" height="500"#}
+{# width="600" height="600"#}
 
 {% block body %}
     {# Mise en place du puzzle le xlink sert pour le referencement #}
     <div class="container">
             <svg  id="puzzle">
-                <g id="fond">Picasso<image xlink:href="{{ asset('assets/images/picasso.png') }}"  x="400" y="200"></g>
+                <g id="fond">Picasso<image xlink:href="{{ asset('assets/images/picasso.png') }}" width="455" height="500" x="400" y="200"></g>
 
                 <g class="imgp" id="0"><image xlink:href="{{ asset('assets/images/piecesp.png') }}" class="movil"></g>
                 <g class="imgp" id="1"><image xlink:href="{{ asset('assets/images/piecesp1.png') }}" class="movil"></g>
