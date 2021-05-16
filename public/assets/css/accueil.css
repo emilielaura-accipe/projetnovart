@@ -19,12 +19,12 @@ header {
 
 .slider img.active {
     display: block;
-    animation: fade 0.8s;
+    animation: fade 1.2s;
 }
 
 @keyframes fade {
     from {
-        opacity: 0;
+        opacity: 0.7;
     }
     to {
         opacity: 1;
