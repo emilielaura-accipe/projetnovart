@@ -18,11 +18,6 @@ h1{
     color:rgb(91, 76, 141);
 }
 
-.champLine:nth-child(1) {
-    grid-area: 1 / 2 / 2 / 6;
-    margin-right: -2px;
-}
-
 #connexCompte {
     font-size: 16px;
     padding: 10px 0px;

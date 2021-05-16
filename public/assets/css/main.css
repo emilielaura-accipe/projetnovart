@@ -109,7 +109,7 @@ label{
     padding-bottom: 10px;
 }
 
-.form input[type="email"], input[type="password"], input[type="text"], input[type="number"] {
+.form input[type="email"], input[type="password"], input[type="text"], input[type="number"], textarea {
     padding: 15px;
     border-radius: 7px;
     border: none;

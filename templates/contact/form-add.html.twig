@@ -17,22 +17,22 @@
       {{ form_start(formContact) }} 
 
          <div class="champs">
-            {{form_label (formContact.nom,'Votre nom')}}
+            {{ form_label(formContact.nom,'Votre nom')}}
             {{ form_widget(formContact.nom) }}
-
+         </div>
 
          <div class="champs">
-            {{form_label (formContact.prenom,'Votre prénom')}}
+            {{ form_label(formContact.prenom,'Votre prénom')}}
             {{ form_widget(formContact.prenom) }}
          </div>  
       
          <div class="champs">
-            {{form_label (formContact.email,'Votre email')}}
+            {{ form_label(formContact.email,'Votre email')}}
             {{ form_widget(formContact.email) }}
          </div>
 
          <div class="champs message">
-            {{form_label (formContact.message,'Votre message')}}
+            {{ form_label(formContact.message,'Votre message')}}
             {{ form_widget(formContact.message) }}
          </div> 
 
