@@ -24,28 +24,29 @@ function selectElement(evt) {
     elementSelect = reorganiser(evt);
     currentX = evt.clientX;
     currentY = evt.clientY;
-    currentPosX = parseFloat(elementSelect.getAttribute("x"));
-    currentPosY = parseFloat(elementSelect.getAttribute("y"));
+    currentPosx = parseFloat(elementSelect.getAttribute("x"));
+    currentPosy = parseFloat(elementSelect.getAttribute("y"));
     elementSelect.setAttribute("onmousemove","moverElement(evt)");
 }
 
 function moverElement(evt){
     let dx = evt.clientX - currentX;
     let dy = evt.clientY - currentY;
-    currentPosX = currentPosX + dx;
-    currentPosY = currentPosY + dy;
-    elementSelect.setAttribute("x",currentPosX);
-    elementSelect.setAttribute("y",currentPosY);
+    currentPosx = currentPosx + dx;
+    currentPosy = currentPosy + dy;
+    elementSelect.setAttribute("x",currentPosx);
+    elementSelect.setAttribute("y",currentPosy);
     currentX = evt.clientX;
     currentY = evt.clientY;
     elementSelect.setAttribute("onmouseout", "deselectionElement(evt)");
-    elementSelect.setAttribute("onmouseup", "deslectionElement(evt)");
+    elementSelect.setAttribute("onmouseup", "deselectionElement(evt)");
     iman();
 }
 //
 function deselectionElement(evt){
+    test();
     if(elementSelect != 0){
-        elementSelect.removeAttribute("onmoussemove");
+        elementSelect.removeAttribute("onmousemove");
         elementSelect.removeAttribute("onmouseout");
         elementSelect.removeAttribute("onmouseup");
         elementSelect = 0;
@@ -53,7 +54,9 @@ function deselectionElement(evt){
 }
 // parentNode est l'élément parent du nœud courant. Le parent d'un élément est un nœud Element (ligne 24) avant "elementSelect = evt.target"
 // Node.cloneNode() renvoie une copie du nœud sur lequel elle a été appelée.
-//Les pieces du puzzle peuvent maintenant s'empiler si l'utilisateur le veut 
+//Les pieces du puzzle peuvent maintenant s'empiler si l'utilisateur le veut
+var puzzle = document.getElementById('puzzle');
+
 function reorganiser(evt){
     var imgp = evt.target.parentNode;
     var clone = imgp.cloneNode(true);
@@ -76,13 +79,18 @@ function iman(){
 }
 
 function test() {
+    var gagner = 0;
     var imgp = document.getElementsByClassName('imgp');
         for(var i=0;i<piece.length;i++){
             var posx = parseFloat(imgp[i].firstChild.getAttribute("x"));
             var posy = parseFloat(imgp[i].firstChild.getAttribute("y"));
             ide = imgp[i].getAttribute("id");
+
             if(origX[ide] == posx && origY[ide] == posy){
-                alert("Felicitation puzzle Fini !")
+                gagner = gagner +1;
             }
+        }
+        if(gagner == 9){
+            alert('Félicitation tu as gagné 4 points !')
         }
 }

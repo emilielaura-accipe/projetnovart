@@ -1,14 +1,21 @@
-body{
-    text-align: center;
+.container{
+    width: 100%;
+    height: 100vh;
+    margin-top: 150px;
+}
+#puzzle{
+    width: 80%;
+    height: 80%;
 }
 #fond{
     opacity: 0.3;
-}
-.container{
-    width: 405px;
-    height: 500px;
     margin: 0 auto;
-    margin-top: 300px;
 }
-
+.movil{
+    width: 285px;
+    height: 285px;
+}
+.imgp img{
+    max-width: 100%;
+}
 
