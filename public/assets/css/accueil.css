@@ -1,3 +1,40 @@
+/* DIV Header */
+
+/* header {
+    min-height: 100vh;
+    background-image: url('../images/Kandinsky1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} */
+
+header{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: lavender;
+}
+
+#carousel img {
+    width: 100%;
+    display: none;
+}
+
+#carousel img.active {
+    display: block;
+    animation: fade 0.8s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 h2{
     font-size: 2.7vw;
     line-height: 1.3;
@@ -6,35 +43,29 @@ h2{
     color: rgb(29, 58, 97);
 }
 
-
-/* DIV Header */
-header{
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgb(252, 235, 203);
-    margin: 0;
-    padding: 0;
-}
-
 #logoHeader{
     padding-top: 75px;
     text-align: center;
 }
 
 h1{
-    font-size: 75px;
-    letter-spacing: 8px;
+    font-size: 120px;
+    letter-spacing: 9px;
+    line-height: 1;
     font-family: 'Mathlete-Bulky';
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
     position: absolute;
-    top: 40%;
-    left: 30%;
+    left: 25%;
+    right: 25%;
+    bottom: 15%;
 }
 /* Fin DIV Header */
 
 
 /* DIV Présentation */
 #presentation{
-    background-color: rgb(250, 177, 93);
+    background-color: rgb(252, 235, 203);
     text-align: center;
     min-height: 130vh;
 }
@@ -68,7 +99,7 @@ h3{
     font-family: 'Router-Book';
     font-size: 28px;
     line-height: 1.5;
-    color: rgb(252, 235, 203);
+    color: rgb(68, 133, 120);
     list-style-type: none;
 }
 
