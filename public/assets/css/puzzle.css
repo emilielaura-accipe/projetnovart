@@ -1,4 +1,14 @@
-#puzzle{
-    display: block;
-    margin: 0 auto;
+body{
+    text-align: center;
 }
+#fond{
+    opacity: 0.3;
+}
+.container{
+    width: 405px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 300px;
+}
+
+

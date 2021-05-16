@@ -8,17 +8,29 @@
 
 {% block javascript %}
     <script src="{{ asset('assets/js/accueil.js') }}"></script>
+    <script src="{{ asset('assets/js/carousel.js') }}"></script>
 {% endblock %}
 
 {% block body %}
 
     <!-- DIV Header -->
     <header>
+        <div id="carousel">
+            <img class="active" src="./assets/images/Kandinsky1.jpg">
+            <img src="./assets/images/Picasso.jpg">
+            <img src="./assets/images/jr.jpg">
+        </div>
+
+        <div id="btnCarou">
+        <div id="btnLeft"><i class="fas fa-chevron-left"></i></div>
+        <div id="btnRight"><i class="fas fa-chevron-right"></i></div>
+        </div>
+
         <div id="logoHeader">
             <p>ICI LE LOGO NOVART</p>
         </div>
         
-        <h1>Phrase d'accroche de Novart</h1>
+        <h1>Apprendre l'art simplement</h1>
     </header>
 
     <!-- DIV Présentation -->

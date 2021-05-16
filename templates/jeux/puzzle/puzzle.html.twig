@@ -1,15 +1,31 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-    {# <link href="{{ asset('assets/css/jeux.css') }}" rel="stylesheet" /> #}
+    <link href="{{ asset('assets/css/puzzle.css') }}" rel="stylesheet" />
 {% endblock %}
+{% block javascript %}
+    <script src="{{ asset('assets/js/puzzle.js') }}"></script>
+{% endblock %}
+
 
 {% block body %}
     {# Mise en place du puzzle le xlink sert pour le referencement #}
-        <svg width="600" height="600" id="puzzle">
-            <g id="fond">Picasso<image xlink:href="/public/assets/images/picasso.png" width="405" height="500" x="200" y="100"></g>
-        </svg>
-    
+    <div class="container">
+            <svg width="600" height="600" id="puzzle">
+                <g id="fond">Picasso<image xlink:href="{{ asset('assets/images/picasso.png') }}" width="405" height="500" x="200" y="100"></g>
 
+                
+                <g class="imgp" id="0"><image xlink:href="{{ asset('assets/images/piècespuzzle.png') }}" class="movil"></g>
+                <g class="imgp" id="1"><image xlink:href="{{ asset('assets/images/piècespuzzle1.png') }}" class="movil"></g>
+                <g class="imgp" id="2"><image xlink:href="{{ asset('assets/images/piècespuzzle2.png') }}" class="movil"></g>
+                <g class="imgp" id="3"><image xlink:href="{{ asset('assets/images/piècespuzzle3.png') }}" class="movil"></g>
+                <g class="imgp" id="4"><image xlink:href="{{ asset('assets/images/piècespuzzle4.png') }}" class="movil"></g>
+                <g class="imgp" id="5"><image xlink:href="{{ asset('assets/images/piècespuzzle5.png') }}" class="movil"></g>
+                <g class="imgp" id="6"><image xlink:href="{{ asset('assets/images/piècespuzzle6.png') }}" class="movil"></g>
+                <g class="imgp" id="7"><image xlink:href="{{ asset('assets/images/piècespuzzle7.png') }}" class="movil"></g>
+                <g class="imgp" id="8"><image xlink:href="{{ asset('assets/images/piècespuzzle8.png') }}" class="movil"></g>
+
+            </svg>
+    </div>
 
 {% endblock %}
