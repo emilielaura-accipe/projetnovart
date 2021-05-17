@@ -38,21 +38,39 @@ body{
     color: rgb(255, 226, 193);
     padding-top: 40px;
 }
+.blocJeu .panier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.panier{
+    background-color:rgb(68, 133, 120);
+    border: none;
+    border-radius: 5px;
+    width: 10%;
+    height: 10%;
+    font-size: 20px;
+    margin-top: 60px;
+    margin-left: 45%;
+}
 
 .fas{
     margin: auto;
-    color: rgb(255, 226, 193);
+    color: rgb(68, 133, 120);
 }
 
 #icon{
-    background: rgb(240, 104, 83);
     position: absolute;
     border-radius: 5px;
     top: 50px;
     right: 10px;
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 35px;
 }
+
+
