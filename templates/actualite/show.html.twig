@@ -2,30 +2,53 @@
 
 {% block title %}Hello ActualiteController!{% endblock %}
 
+{% block stylesheets %}
+    <link href="{{ asset('assets/css/actualite.css') }}" rel="stylesheet" />
+{% endblock %}
 {% block body %}
- 
+  
 
- 
-    <div id="actualites">
-        <h1>Les dernières actualités artistiques</h1>
+
+
+<div id="actualites">
+    
+    <h1>Les dernières actualités artistiques</h1>
+
+    <div id="blocActu">
         
-        <div id="bloc_actu">
-                    
-             
-            <div class="article_actu">
-                <img src="{{actualite.image}} ">
-                 <p>{{actualite.legende}} </p>
-                <div class="titre_actu">
-                    <h5>{{actualite.titre}}</h5>
-                   <p>{{actualite.contenu}} </p>
-                </div>
-               <a class="btn btn-primary btn-lg" href="" role="button">Retour page acceuil</a>
+       
+            <div class="uneActu">
 
+                <div class="articleActu">
+                <!-- liens vers une actualite -->
+                       <img class="image" src="{{actualite.image}}"></a>
+
+                        <p>{{actualite.legende}} </p>
+
+                    <div class="titreActu">
+                        <h5>{{actualite.titre}}</h5>
+                    </div>
+
+                </div> 
+
+                <div class="textActu">
+                    <h2>{{actualite.contenu}}</h2>                   
+                </div>
+                
             </div>
-            
+
     </div>
 
- 
+</div>
 
+
+ 
+    
+                <a class="btn btn-primary btn-lg" href="" role="button">Retour page acceuil</a>
+              
+       
+   
+
+ 
 {% endblock %}
                    
