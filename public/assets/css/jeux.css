@@ -4,14 +4,11 @@ body{
     background-color: rgb(252, 235, 203);
 }
 
-/* A voir pour le paragraphe */
-
 #texte{
     margin: 0 auto;
     width: 50%;
 }
 
-/* Les jeux A voir les Typo */
 #jeux{
     display: flex;
     text-align: center;
@@ -72,5 +69,4 @@ body{
     align-items: center;
     font-size: 35px;
 }
-
 
