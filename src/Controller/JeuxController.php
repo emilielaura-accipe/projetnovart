@@ -37,5 +37,15 @@ class JeuxController extends AbstractController
             'controller_name' => 'DefaultController',
         ]);
     }
+    
+    /**
+     * @Route("/jeux/points", name="end_game")
+     */
+    public function points(): Response
+    {
+        return $this->render('jeux/points.html.twig', [
+            'controller_name' => 'DefaultController',
+        ]);
+    }
 
 }
