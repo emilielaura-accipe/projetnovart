@@ -18,7 +18,9 @@
 
             <div class="articleActu">
             <!-- liens vers une actualite -->
-                <a href="{{ path('actualite_show', {id:actualites.id}) }} " target="_blank"><img class="image" src="{{actualites.image}}"></a>
+                <a href="{{ path('actualite_show', {id:actualites.id}) }} " target="_blank">
+                    <img class="image" src="{{actualites.image}}">
+                </a>
 
                 <!-- <div class="textActu">
                     <p> {# {{actualites.contenu}} #} </p>                   
@@ -29,19 +31,23 @@
                 </div>
 
                 <div class="titreActu">
-                    <h5>{{actualites.titre}}</h5>
+                    <a href="{{ path('actualite_show', {id:actualites.id}) }} " target="_blank">
+                        <h5>{{actualites.titre}}</h5>
+                    </a>
                 </div>
 
-
-
             </div> 
-
-
-            
+   
         </div>
 
         {% endfor %} 
 
     </div>
+    
+    <!-- DIV Footer -->
+    {% block footer %}
+        {{ include('footer.html.twig') }}
+    {% endblock %}
 
 {% endblock %}
+

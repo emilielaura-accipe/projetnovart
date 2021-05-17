@@ -1,54 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ActualiteController!{% endblock %}
+{% block title %}Une actualité{% endblock %}
 
 {% block stylesheets %}
     <link href="{{ asset('assets/css/actualite.css') }}" rel="stylesheet" />
 {% endblock %}
+
+
 {% block body %}
-  
 
+    <h1>{{actualite.titre}}</h1>
 
-
-<div id="actualites">
-    
-    <h1>Les dernières actualités artistiques</h1>
-
-    <div id="blocActu">
+    <div id="containerActu">
         
-       
-            <div class="uneActu">
+        <div class="oeuvre">
+            <img src="{{actualite.image}}">
+        </div>
 
-                <div class="articleActu">
-                <!-- liens vers une actualite -->
-                       <img class="image" src="{{actualite.image}}"></a>
+        <span>{{actualite.legende}}</span>
 
-                        <p>{{actualite.legende}} </p>
-
-                    <div class="titreActu">
-                        <h5>{{actualite.titre}}</h5>
-                    </div>
-
-                </div> 
-
-                <div class="textActu">
-                    <h2>{{actualite.contenu}}</h2>                   
-                </div>
-                
-            </div>
+        <div class="descripActu">
+            <p>{{actualite.contenu}}</p>                   
+        </div>
 
     </div>
 
-</div>
-
-
- 
-    
-                <a class="btn btn-primary btn-lg" href="" role="button">Retour page acceuil</a>
-              
-       
-   
-
+    <a class="retourActu" href="" role="button">Retour aux actualités</a>
  
 {% endblock %}
                    
