@@ -1,29 +1,79 @@
+body{
+    height: 120vh;
+    box-sizing: border-box;
+}
+
 #EnteteMemo {
     width: 60%;
     margin: 0 auto;
+    padding-bottom: 50px;
 }
 
-#memory {
+.memoryGame {
     width: 70%;
+    height: 700px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 50px;
+    margin-left: 19%;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
 }
 
-#memory img {
+.memoryCard {
     width: 250px;
     height: 250px;
-    padding-bottom: 40px;
+    margin: 10px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 0 0 15px rgb(248, 217, 159);
+    cursor: pointer;
 }
 
-span {
-    width: 250px;
-    height: 250px;
-    display: inline-block;
-    background-color: rgb(68, 133, 120);
-    margin-bottom: 40px;
+.memoryCard:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.memoryCard.flip {
+    transform: rotateY(180deg);
+}
+
+.backFace, .frontFace {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    background: linear-gradient(rgb(68, 143, 128), rgba(68, 143, 128, 0.76));
+    backface-visibility: hidden;
+}
+
+.frontFace {
+    transform: rotateY(180deg);
+}
+
+#boutonPartie {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+input {
+    padding: 15px 0px;
+    margin-top: 15px;
     text-align: center;
+    background-color: rgb(29, 58, 97);
     color: rgb(252, 235, 203);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgb(253, 226, 174);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Router-Book';
 }
 
+input:hover {
+    box-shadow: 0 0 25px rgb(251, 219, 158);
+    padding: 16px 1px;
+}

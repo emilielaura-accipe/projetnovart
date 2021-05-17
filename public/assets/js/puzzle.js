@@ -10,7 +10,7 @@ for(var i=0;i<piece.length;i++){
     piece[i].setAttribute("height", pHeight[i]);
     piece[i].setAttribute("x", Math.floor((Math.random() * 10) +1));
     piece[i].setAttribute("y", Math.floor((Math.random() * 409) +1));
-    piece[i].setAttribute("onmousedown","selectElement(evt)");
+    piece[i].setAttribute("onmousedown","selectionElement(evt)");
 }
 
 var elementSelect = 0;
@@ -20,7 +20,7 @@ var currentPosX = 0;
 var currentPosY = 0;
 //Target est tres utile pour trouver l'origine de l'événement qui est en ligne 13 
 // Selection des pieces et leurs methodes pour les bouger 
-function selectElement(evt) {
+function selectionElement(evt) {
     elementSelect = reorganiser(evt);
     currentX = evt.clientX;
     currentY = evt.clientY;
@@ -87,10 +87,10 @@ function test() {
             ide = imgp[i].getAttribute("id");
 
             if(origX[ide] == posx && origY[ide] == posy){
-                gagner = gagner +1;
+                gagner = gagner + 1;
             }
         }
         if(gagner == 9){
-            alert('Félicitation tu as gagné 4 points !')
+            var win = prompt('Félicitation tu as gagné 4 points !')
         }
 }

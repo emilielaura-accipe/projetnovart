@@ -12,22 +12,33 @@
 {% block body %}
     {# Mise en place du puzzle le xlink sert pour le referencement #}
     <div class="container">
-            <svg  id="puzzle">
-                <g id="fond">Picasso<image xlink:href="{{ asset('assets/images/picasso.png') }}" width="455" height="500" x="400" y="200"></g>
+    
+        <svg  id="puzzle">
+            <g id="fond">Picasso<image xlink:href="{{ asset('assets/images/picasso.png') }}" width="455" height="500" x="400" y="200"></g>
 
-                <g class="imgp" id="0"><image xlink:href="{{ asset('assets/images/piecesp.png') }}" class="movil"></g>
-                <g class="imgp" id="1"><image xlink:href="{{ asset('assets/images/piecesp1.png') }}" class="movil"></g>
-                <g class="imgp" id="2"><image xlink:href="{{ asset('assets/images/piecesp2.png') }}" class="movil"></g>
-                <g class="imgp" id="3"><image xlink:href="{{ asset('assets/images/piecesp3.png') }}" class="movil"></g>
-                <g class="imgp" id="4"><image xlink:href="{{ asset('assets/images/piecesp4.png') }}" class="movil"></g>
-                <g class="imgp" id="5"><image xlink:href="{{ asset('assets/images/piecesp5.png') }}" class="movil"></g>
-                <g class="imgp" id="6"><image xlink:href="{{ asset('assets/images/piecesp6.png') }}" class="movil"></g>
-                <g class="imgp" id="7"><image xlink:href="{{ asset('assets/images/piecesp7.png') }}" class="movil"></g>
-                <g class="imgp" id="8"><image xlink:href="{{ asset('assets/images/piecesp8.png') }}" class="movil"></g>
+            <g class="imgp" id="0"><image xlink:href="{{ asset('assets/images/piecesp.png') }}" class="movil"></g>
+            <g class="imgp" id="1"><image xlink:href="{{ asset('assets/images/piecesp1.png') }}" class="movil"></g>
+            <g class="imgp" id="2"><image xlink:href="{{ asset('assets/images/piecesp2.png') }}" class="movil"></g>
+            <g class="imgp" id="3"><image xlink:href="{{ asset('assets/images/piecesp3.png') }}" class="movil"></g>
+            <g class="imgp" id="4"><image xlink:href="{{ asset('assets/images/piecesp4.png') }}" class="movil"></g>
+            <g class="imgp" id="5"><image xlink:href="{{ asset('assets/images/piecesp5.png') }}" class="movil"></g>
+            <g class="imgp" id="6"><image xlink:href="{{ asset('assets/images/piecesp6.png') }}" class="movil"></g>
+            <g class="imgp" id="7"><image xlink:href="{{ asset('assets/images/piecesp7.png') }}" class="movil"></g>
+            <g class="imgp" id="8"><image xlink:href="{{ asset('assets/images/piecesp8.png') }}" class="movil"></g>
 
-            </svg>
-    </div>
-    <div>
+        </svg>
+
+        <div id="description">
+            <h2>Description de l'oeuvre</h2>
+
+            <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.</p>
+
+            <div class="legende">
+                <h2>Légende de l'oeuvre</h2>
+                <p>Le Violon (Picasso) </p>
+
+            </div>
+        </div>
 
     </div>
 
