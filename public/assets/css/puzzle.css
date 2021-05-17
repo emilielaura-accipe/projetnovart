@@ -1,17 +1,28 @@
+
 .container{
-    width: 100%;
+    width: 70%;
     height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+#description{
+    width: 30%;
+    margin: 10px;
+    /* margin-top: 10%; */
+    color: rgb(68, 133, 120);
+    font-size: 20px;
 }
 #puzzle{
     width: 80%;
     height: 80%;
     margin-top: 150px;
+
 }
 #fond{
     opacity: 0.3;
     margin: 0 auto;
 }
-
 .movil{
     width: 285px;
     height: 285px;
@@ -19,4 +30,3 @@
 .imgp img{
     max-width: 100%;
 }
-
