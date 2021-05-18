@@ -47,17 +47,21 @@
         <div id="blocDef">
 
             <div class="textAnim">
-                <h3>A.</h3>
+                
+            {% for glossaire in glossaires %} 
+                {% set letter = glossaire.mot|first|upper %}
+                <h3>{{ letter }}.</h3>
 
+                {% for alpha in glossaires %}
+                {% if letter == alpha.mot|first|upper %}
                 <div class="defGlo">
-                    <h4>Art abstrait</h4>
-                    <p>Expression artistique, née au début du XXe siècle, qui ne met pas en jeu la représentation du réel. Kandinsky (1866-1944) est un artiste pionnier de cette nouvelle tendance en peinture. Plusieurs courants d’art abstrait se succèdent ou coexistent jusqu’à nos jours.</p>
+                    <h4>{{ alpha.mot }}</h4>
+                    <p>{{ alpha.definition }}</p>                   
                 </div>
+                {% endif %}
+                {% endfor %}
 
-                <div class="defGlo">
-                <h4>Art Nouveau</h4>
-                    <p>Style qui se développe dès la fin du XIXe siècle, d'abord en Belgique et en France. Il s’épanouit dans l’architecture et dans les arts décoratifs. La recherche de fonctionnalité est une des préoccupations de ses architectes et designers. L’Art nouveau se caractérise par des formes inspirées de la nature, où la courbe domine.</p>
-                </div>
+            {% endfor %} 
 
             </div>
 

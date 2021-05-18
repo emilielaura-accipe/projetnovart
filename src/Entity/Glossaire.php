@@ -27,6 +27,7 @@ class Glossaire
      */
     private $definition;
 
+
     public function getId(): ?int
     {
         return $this->id;
@@ -55,4 +56,5 @@ class Glossaire
 
         return $this;
     }
+
 }
