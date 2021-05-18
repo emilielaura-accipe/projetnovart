@@ -1,0 +1,24 @@
+#boxpts{
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    width: 60%;
+    
+}
+/* points mise en forme */
+.point{
+    width: 100%;
+    
+    
+}
+
+#cercle1, #cercle{
+    background:rgb(64, 165, 161);
+    border-radius:50%;
+    width:160px;
+    height:160px;
+    border: 10px solid rgb(68, 133, 120);
+}
+
+
+  
