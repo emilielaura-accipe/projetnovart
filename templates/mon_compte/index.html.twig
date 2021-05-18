@@ -1,7 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-    <link href="#" rel="stylesheet" />
+    <link href="{{ asset('assets/css/moncompte.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block javascript %}
+    <script src="{{ asset('assets/js/moncompte.js') }}"></script>
 {% endblock %}
 
 {% block body %}
@@ -23,20 +27,16 @@
         <div class="contenu activecontenu" data-anim="1">
             <p>Test contenu</p>
         </div>
-        <div class="contenu activecontenu" data-anim="2">
+        <div class="contenu" data-anim="2">
             <p> Test contenu</p>
         </div>
-        <div class="contenu activecontenu" data-anim="3">
+        <div class="contenu" data-anim="3">
             <p> Test contenu</p>
         </div>
-        <div class="contenu activecontenu" data-anim="4">
+        <div class="contenu" data-anim="4">
             <p> Test contenu</p>
         </div>
 
     </div>
-
-{% block javascript %}
-    
-{% endblock %}
 
 {% endblock %}
