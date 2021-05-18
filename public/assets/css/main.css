@@ -107,6 +107,14 @@ h2{
     color: rgb(29, 58, 97);
     text-align: center;
 }
+
+h3 {
+    color: rgb(29, 58, 97);
+    margin-top: 30px;
+    font-family: 'Router-Bold';
+    font-size: 18px;
+    text-align: center;
+}
 /* FIN TITRES */
 
 
