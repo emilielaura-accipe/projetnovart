@@ -1,7 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-    <link href="#" rel="stylesheet" />
+    <link href="{{ asset('assets/css/moncompte.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block javascript %}
+    <script src="{{ asset('assets/js/moncompte.js') }}"></script>
 {% endblock %}
 
 {% block body %}
@@ -20,23 +24,45 @@
 
         </div>
 
-        <div class="contenu activecontenu" data-anim="1">
-            <p>Test contenu</p>
+            <div class="contenu activecontenu" data-anim="1">
+                <div class="champs">
+                    {# {{ form_label(formContact.nom,'Votre nom')}}
+                    {{ form_widget(formContact.nom) }} #}
+                </div>
+
+            <div class="champs">
+                {# {{ form_label(formContact.prenom,'Votre prénom')}}
+                {{ form_widget(formContact.prenom) }} #}
+            </div>  
+      
+            <div class="champs">
+                {# {{ form_label(formContact.email,'Votre email')}}
+                {{ form_widget(formContact.email) }} #}
+            </div>
+
+                <div class="bouton">
+                    <button type="submit">Modification</button>
+                </div>
+                <div class="bouton">
+                    <button type="submit1">Suppression</button>
+                </div>
+
+    
         </div>
-        <div class="contenu activecontenu" data-anim="2">
-            <p> Test contenu</p>
-        </div>
-        <div class="contenu activecontenu" data-anim="3">
-            <p> Test contenu</p>
-        </div>
-        <div class="contenu activecontenu" data-anim="4">
-            <p> Test contenu</p>
+
+            <div class="contenu" data-anim="2">
+                <div class="champs">
+                    <p> Vos mallettes</p>
+                </div>
+            </div>
+
+            <div class="contenu" data-anim="3">
+                <p> Vos remboursements</p>
+            </div>
+        <div class="contenu" data-anim="4">
+            <p>Vos Bonus</p>
         </div>
 
     </div>
-
-{% block javascript %}
-    
-{% endblock %}
 
 {% endblock %}

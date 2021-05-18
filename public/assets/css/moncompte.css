@@ -1,0 +1,79 @@
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 660px;
+    height: 300px;
+    /* background: rgb(68, 133, 120); */
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.container-onglets{
+    background: rgb(68, 133, 120);
+    width: 100%;
+    height: 30%;
+    display: flex;
+    border-bottom: 1px solid #333;
+}
+.onglets {
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+.onglets:not(:nth-child(4)) {
+    border-right: 1px solid #333;
+}
+
+.contenu {
+    height: 70%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+}
+.contenu h3 {
+    padding: 20px;
+}
+.contenu hr {
+    width: 20%;
+    height: 2px;
+    margin-left: 20px;
+    background: #000;
+    border: none;
+}
+.contenu p {
+    padding: 20px;
+}
+button[type="submit"]{
+    background-color:rgb(250, 177, 93);
+}
+button[type="submit1"]{
+    background-color:rgb(240, 104, 83);
+}
+
+/* Anim */
+
+.active {
+    background: rgb(250, 177, 93);
+    color: rgb(35, 57, 54);
+    transition: all 0.3s ease;
+}
+
+.activeContenu {
+    animation: fade 0.5s forwards;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
