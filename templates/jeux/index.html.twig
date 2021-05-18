@@ -1,41 +1,50 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-    <link href="{{ asset('assets/css/jeux.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/unemallette.css') }}" rel="stylesheet" />
 {% endblock %}
 
 {% block body %}
 
-        <h1>Ici une boucle titre mallette</h1>
-        {# Texte a voir ce qu'on met #}
-        <div id="texte">
+    <h1>Le cubisme</h1>
 
-            <h2>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.</h2>
+    <div id="texte">
 
-        </div>
+        <h2>Né au début du 20e siècle, le cubisme constitua une révolution majeure dans la peinture et la sculpture. Son principe ? Découper et représenter toutes les faces d'un objet sur la toile. Grâce à cette mallette, tu pourras apprendre à dessiner comme Pablo Picasso !</h2>
+        
+        <h3>Voici les jeux que nous te proposons pour découvrir l'art cubique. <br>Pour te lancer, ajoute cette mallette à ton panier.</h3>
 
-        {# Les trois jeux (puzzle, memory, coloriage) #}
+    </div>
 
-        <div id="jeux">
-            <div class="blocJeu">
-                <div>
-                    <p>Puzzle</p>
-                </div>
-            </div>
-            
-            <div class="blocJeu">
-                <div>
-                    <p>Memory</p>
-                </div>
-            </div>
+    {# Les trois jeux (puzzle, memory, coloriage) #}
 
-            <div class="blocJeu">
-                <div>
-                    <p>Coloriage</p>
-                </div>
+    <div id="jeux">
+
+        <div class="blocJeu">
+            <div>
+                <p>Puzzle</p>
             </div>
         </div>
-        <div>
-            <button class="panier" type="submit">Ajouter au panier</button>
+        
+        <div class="blocJeu">
+            <div>
+                <p>Memory</p>
+            </div>
         </div>
+
+        <div class="blocJeu">
+            <div>
+                <p>Coloriage</p>
+            </div>
+        </div>
+
+    </div>
+    
+    <button class="btnP" type="submit">Ajouter au panier</button>
+
+    <!-- DIV Footer -->
+    {% block footer %}
+        {{ include('footer.html.twig') }}
+    {% endblock %}
+
 {% endblock %}
