@@ -51,22 +51,3 @@ body{
     margin-top: 60px;
     margin-left: 45%;
 }
-
-.fas{
-    margin: auto;
-    color: rgb(68, 133, 120);
-}
-
-#icon{
-    position: absolute;
-    border-radius: 5px;
-    top: 50px;
-    right: 10px;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 35px;
-}
-
