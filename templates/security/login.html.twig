@@ -5,21 +5,32 @@
 {% endblock %}
 
 {% block body %}
+<form method="post">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3">
+           Vous voulez vous déconnecter {{ app.user.username }}, <a href="{{ path('app_logout') }}">Déconnecter</a>
+        </div>
+    {% endif %}
 
     <div class="form">
         <h1>Connexion</h1>
 
         <form action="" method="">
             <div class="champs">
-                <label for="">Saisissez votre adresse e-mail</label>
-                <input type="email" placeholder="e-mail" name="" id="">
+                <label for="inputEmail">Saisissez votre adresse e-mail</label>
+                <input type="email" placeholder="e-mail" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
             </div>
 
             <div class="champs">
-                <label for="">Saisissez votre mot de passe</label>
-                <input type="password" placeholder="mot de passe" name="" id="">
+                <label for="inputPassword">Saisissez votre mot de passe</label>
+                <input type="password" placeholder="mot de passe" name="password" id="inputPassword" class="form-control" required>
             </div>
-
+            
+           <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
             <div class="bouton">
                 <button type="submit">Se connecter</button>
             </div>
@@ -34,10 +45,12 @@
 
         <div id="crea_compte">
             <span>Vous n'avez pas encore de compte ?</span>
-            <a href="">Inscrivez-vous</a>
+            <a href="{{ path('users_add')}} ">Inscrivez-vous</a>
         </div>
 
     </div>
+   </form>
+
 
    {#
      <form method="post">
