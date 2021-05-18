@@ -36,7 +36,7 @@ class UsersController extends AbstractController
          $entityManger->persist($users);
          $entityManger->flush();
 
-         return $this->redirectToRoute('index');
+         return $this->redirectToRoute('users/form-add.html.twig');
         }                   
 
         return $this->render('users/form-add.html.twig',[
