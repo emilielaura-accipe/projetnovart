@@ -42,7 +42,7 @@ class PaiementController extends AbstractController
      */
     public function checkout()
     {
-        \Stripe\Stripe::setApiKey('sk_test_51Is9hUI5JMdcaI0ahFiSqc1xG8mRluEgNCQ3yXaNofqmuiFlKQfjt01NyRrzEgDeXTZqLruK6L1DYU0M5jqV1v6100WSKJVPvv');
+        Stripe::setApiKey('sk_test_51Is9hUI5JMdcaI0ahFiSqc1xG8mRluEgNCQ3yXaNofqmuiFlKQfjt01NyRrzEgDeXTZqLruK6L1DYU0M5jqV1v6100WSKJVPvv');
 
         $session = \Stripe\Checkout\Session::create([
             'payment_method_types' => ['card'],
@@ -61,6 +61,7 @@ class PaiementController extends AbstractController
             'cancel_url' => $this->generateUrl('error',[],UrlGeneratorInterface::ABSOLUTE_URL)
             
           ]);
-          return new JsonResponse(['id' => $session->id]);
+          return new JsonResponse (['id' => $session->id]);
     }
+         
 }
