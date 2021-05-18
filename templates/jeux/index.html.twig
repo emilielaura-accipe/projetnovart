@@ -6,9 +6,12 @@
 
 {% block body %}
 
-        <h1>Ici une boucle titre mallette</h1>
+
+
+        <a href="{{ path('mallette_show', {id: mallette.id})}}" ></a>
+        
         <div id="icon">
-        <a href="{{ path('panier')}} "><i class="fas fa-shopping-basket fa-2x" ></i></a>
+        <a href="{{ path('panier')}}"><i class="fas fa-shopping-basket fa-2x" ></i></a>
         </div>
         {# Texte a voir ce qu'on met #}
         <div id="texte">
@@ -16,7 +19,6 @@
             <h2>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.</h2>
 
         </div>
-
         {# Les trois jeux (puzzle, memory, coloriage) #}
 
         <div id="jeux">
@@ -39,6 +41,6 @@
             </div>
         </div>
         <div>
-            <button class="panier" type="submit">Ajouter au panier</button>
+            <button class="panier" href="{{ path('panier')}}" type="submit">Ajouter au panier</button>
         </div>
 {% endblock %}
