@@ -8,7 +8,7 @@
 
 
 <!-- Condition  si cest panier vide ou pas-->
- {% if  panier | length > 0 %}
+ {% if  items | length > 0 %}
   <table class="table">
         <thead>
                 <tr>
@@ -21,14 +21,15 @@
          </thead>
 
         <tbody>
-             {% for panier in paniers %}
-                  <td>{{ panier.mallette.titre }} </td>
-                  <td>{{ panier.mallette.prix }} </td>
-                  <td>{{ panier.quantity }} </td>
-                   <td>{{ panier.mallette.prix * panier.quantity }} </td>
+
+{% for paniers in panier %}
+                  <td>{{ paniers.mallette.titre }} </td>
+                  <td>{{ paniers.mallette.prix }} </td>
+                  <td>{{ paniers.quantity }} </td>
+                   <td>{{ paniers.mallette.prix * paniers.quantity }} </td>
                    <td>
 
-                   <a href="{{ path('panier_remove',{'id': panier.mallette.id} )}} " class="">
+                   <a href="{{ path('panier_remove',{'id': paniers.mallette.id} )}} " class="">
                     <i class="fas fa-trash"></i>
                    </td>
 {% endfor %}        
@@ -45,11 +46,13 @@
              
         </tfoot> 
 
-    </table>
+</table>
 
 
  {% else %}
-    <p>Surprise, c'est vide !</p>
+
+    
+          <h2>Surprise, c'est vide !</h2>
 
  {% endif %}
 
