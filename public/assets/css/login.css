@@ -1,3 +1,7 @@
+body{
+    height: 120vh;
+}
+
 h1{
     color: rgb(68, 133, 120);
 }
