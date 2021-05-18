@@ -51,6 +51,12 @@
 .contenu p {
     padding: 20px;
 }
+button[type="submit"]{
+    background-color:rgb(250, 177, 93);
+}
+button[type="submit1"]{
+    background-color:rgb(240, 104, 83);
+}
 
 /* Anim */
 
