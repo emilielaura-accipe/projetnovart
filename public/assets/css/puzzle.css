@@ -1,6 +1,6 @@
 .container{
     width: 70%;
-    height: 120vh;
+    height: 90vh;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
@@ -10,12 +10,14 @@
     width: 30%;
     margin: 10px;
     padding-left: 60px;
-    /* margin-top: 10%; */
     color: rgb(68, 133, 120);
     font-family: 'Router-Book';
     font-size: 20px;
 }
-
+#titrepuzzle {
+    width: 60%;
+    margin: 0 auto;
+}
 #puzzle{
     width: 80%;
     height: 80%;
