@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ContactController extends AbstractController
 {
     /**
-     * @Route("/contact/add", name="contact_add")
+     * @Route("/contact", name="contact")
      */
     public function add(Request $request)
     {
