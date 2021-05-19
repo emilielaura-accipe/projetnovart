@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('assets/css/login.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block title %}Modification du mot de passe de {{app.users.nom}}{{app.users.prenom}} {% endblock %}
+
+{% block body %}
+ <div class="form">
+        <h1>Modification du mot de passe de {{app.users.nom}}{{app.users.prenom}}</h1>
+
+        <form action="" method="post">
+           
+            <div class="champs">
+                <label for="inputPassword">Mot de passe</label>
+                <input type="password" placeholder="mot de passe" name="password" id="password" class="form-control" required>
+            </div>
+            <div class="champs">
+                <label for="inputPassword2">Confirmer le mot de passe</label>
+                <input type="password" placeholder="mot de passe" name="password2" id="password2" class="form-control" required>
+            </div>
+            <div class="bouton">
+                <button type="submit">Valider</button>
+            </div>
+        </form>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
