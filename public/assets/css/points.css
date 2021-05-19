@@ -2,18 +2,10 @@
     display: flex;
     margin: 0 auto;
     text-align: center;
-    width: 60%;
+    width: 50%;
 }
 
 /* points mise en forme */
-
-.point {
-    width: 100%;
-}
-.text {
-     margin-top: 100px;
-     margin-bottom: 100px;
-}
 
 .chiffre, .chiffre1 {
     display: flex;
@@ -24,18 +16,16 @@
 
 #cercle1, #cercle {
     border-radius:50%;
-    width:160px;
-    height:160px;
+    width: 150px;
+    height: 150px;
     font-size: 30px;
     justify-content: center;
     align-content: center;
-    margin: 150px;
+    margin: 130px;
 }
 #cercle {
     background:rgb(250, 177, 93);
     border: 10px solid rgb(240, 104, 83);
-    justify-content: center;
-    align-content: center;
 }
 #cercle1 {
     background-color: rgb(68, 133, 120);;
