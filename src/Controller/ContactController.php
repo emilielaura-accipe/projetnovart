@@ -22,14 +22,14 @@ class ContactController extends AbstractController
         $formContact->handleRequest($request);
         if($formContact->isSubmitted() && $formContact->isValid())
         {
-        $entityManger = $this->getDoctrine()->getManager();
-        $entityManger->persist($contact);
-        $entityManger->flush();
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($contact);
+        $entityManager->flush();
 
         return $this->redirectToRoute('index');
         }                   
 
-        return $this->render('contact/form-add.html.twig',[
+        return $this->render('contact/contact.html.twig',[
             'formContact' =>$formContact->createView()
         ]);
     }
