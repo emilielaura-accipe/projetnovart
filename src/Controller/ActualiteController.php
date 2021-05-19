@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Actualites;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -17,12 +18,16 @@ class ActualiteController extends AbstractController
         $actualite = $this->getDoctrine()->getRepository(Actualites::class)->findAll();
         return $this->render('actualite/index.html.twig', [
             'actualite' => $actualite
+    
+
         ]);
     }
+
+    
     /**
-      * @Route("/actualite/show/{id}", name="actualite_show")
-      */ 
-      public function show($id)
+     * @Route("/actualite/show/{id}", name="actualite_show")
+     */ 
+    public function show($id)
       {
           $actualite = $this->getDoctrine()->getRepository(Actualites::class)->find($id);
   
@@ -30,8 +35,10 @@ class ActualiteController extends AbstractController
               'actualite' =>$actualite
           ]);
       }
+   
+    
+ }
 
-}
 
 
     
