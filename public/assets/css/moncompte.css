@@ -5,14 +5,12 @@
     transform: translate(-50%,-50%);
     width: 660px;
     height: 300px;
-    /* background: rgb(68, 133, 120); */
     border-radius: 2px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    text-align: center;
 }
 
 .container-onglets{
-    background: rgb(68, 133, 120);
+    background: rgb(68, 133, 120); 
     width: 100%;
     height: 30%;
     display: flex;
@@ -37,25 +35,26 @@
     width: 100%;
     position: absolute;
     opacity: 0;
+
 }
-.contenu h3 {
-    padding: 20px;
-}
-.contenu hr {
-    width: 20%;
-    height: 2px;
-    margin-left: 20px;
-    background: #000;
-    border: none;
-}
-.contenu p {
-    padding: 20px;
-}
+/* les boutons */
 button[type="submit"]{
     background-color:rgb(250, 177, 93);
 }
+
 button[type="submit1"]{
-    background-color:rgb(240, 104, 83);
+    border-radius: 10px;
+    background-color : rgb(240, 104, 83);
+    margin-left: 60%;
+}
+
+button[type="submit"], [type="submit1"]{
+    border-radius: 10px;
+    border: none;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-family: 'Router-Book';
+    font-size: 20px;
 }
 
 /* Anim */
@@ -68,6 +67,8 @@ button[type="submit1"]{
 
 .activeContenu {
     animation: fade 0.5s forwards;
+    padding: 5px;
+    justify-content: space-around;
 }
 @keyframes fade {
     from {
