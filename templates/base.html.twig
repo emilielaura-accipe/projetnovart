@@ -31,17 +31,20 @@
 
     {% endblock %}
 
+
+
+
     <!-- Lien Green Sock -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-
-    {% block javascript %}{% endblock %}
 
     <script src="{{ asset('assets/js/mallettes.js') }}"></script>
 
     <!-- Lien menu.js -->
     <script src="{{ asset('assets/js/menu.js') }}"></script>
 
-      
+    {% block javascript %}
+    {% endblock %}
+
   </body>
 
 </html>
