@@ -32,6 +32,10 @@ button{
     color: rgb(68, 133, 120);
 }
 
+button[type="submit"]:active {
+    color: rgb(68, 133, 120);
+}
+
 hr{
     padding: 0.7px;
     background-color: rgb(68, 133, 120);
