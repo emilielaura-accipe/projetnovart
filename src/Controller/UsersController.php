@@ -8,6 +8,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoder;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class UsersController extends AbstractController
 {
@@ -42,10 +44,21 @@ class UsersController extends AbstractController
         return $this->render('users/form-add.html.twig',[
              'formUser' =>$formUser->createView()
         ]);
+    }   
+    /**
+     * @Route("/users/pass/modifier", name="users_pass_modifier")
+     */
 
-   
-        
+    public function editPass(Request $request,UserPasswordEncoderInterface $passwordEncoder)
+    {
+        if($request->isMethod('POST')){
+            $em = $this->getDoctrine()->getManager();
 
+            $users = $this->getUser();
+        }
         
-    } 
+        return $this->render('users/editpass.html.twig',[
+             
+        ]);
+    }
 }
