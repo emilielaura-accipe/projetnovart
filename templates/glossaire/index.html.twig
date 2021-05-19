@@ -47,19 +47,14 @@
         <div id="blocDef">
 
             <div class="textAnim">
-                
+               
             {% for glossaire in glossaires %} 
+            
                 {% set letter = glossaire.mot|first|upper %}
-                <h3>{{ letter }}.</h3>
-
-                {% for alpha in glossaires %}
-                {% if letter == alpha.mot|first|upper %}
-                <div class="defGlo">
-                    <h4>{{ alpha.mot }}</h4>
-                    <p>{{ alpha.definition }}</p>                   
-                </div>
-                {% endif %}
-                {% endfor %}
+                 <h3>{{ letter }}.</h3>
+                 <h1>{{glossaire.mot}} </h1>
+                 <p>{{ glossaire.definition}} </p>
+                
 
             {% endfor %} 
 
