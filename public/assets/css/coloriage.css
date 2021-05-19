@@ -4,7 +4,6 @@
     padding-bottom: 50px;
 }
 
-
 #boutonPartie {
     width: 60%;
     margin: 0 auto;
@@ -25,11 +24,9 @@ input {
     font-family: 'Router-Book';
 }
 
-input:hover {
-    box-shadow: 0 0 25px rgb(251, 219, 158);
-    padding: 16px 1px;
+input:active {
+    color: rgb(29, 58, 97);
 }
-
 
 #dessin {
     display: flex;
@@ -68,10 +65,16 @@ input:hover {
     align-items: center;
 }
 
+i {
+    color: rgb(29, 58, 97);
+}
+
 #outils div {
     background-color: white;
 }
 
 #palette div:hover, #outils div:hover {
-    height: 105px;
+    opacity: 0.9;
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+      6px 6px 10px rgba(0, 0, 0, 0.2);
 }
