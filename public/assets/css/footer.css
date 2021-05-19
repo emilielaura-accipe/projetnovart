@@ -3,12 +3,16 @@ footer{
     background-color: rgb(68, 133, 120);
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
+#logoFooter, #socialFooter {
+    padding-right: 120px;
+}
+
 #infoFooter{
-    font-size: 22px;
+    font-size: 20px;
     font-family: 'Router-Book';
     color: rgb(252, 235, 203);
     line-height: 1.7;
