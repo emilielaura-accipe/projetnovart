@@ -38,7 +38,7 @@ class UsersController extends AbstractController
          $entityManger->persist($users);
          $entityManger->flush();
 
-         return $this->redirectToRoute('users/form-add.html.twig');
+         return $this->redirectToRoute('mon/compte');
         }                   
 
         return $this->render('users/form-add.html.twig',[
@@ -55,6 +55,13 @@ class UsersController extends AbstractController
             $em = $this->getDoctrine()->getManager();
 
             $users = $this->getUser();
+
+            // On vérifie si les 2 motts de passe sont identiques
+            if($request->request->get('password') == $request->request->get('password2')){
+
+            }else{
+                $this->addFlash('error','Les deux mots de passe ne sont pas indetiques');
+            }
         }
         
         return $this->render('users/editpass.html.twig',[
