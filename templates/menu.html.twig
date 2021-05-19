@@ -1,3 +1,8 @@
+<nav>
+    <a href="{{ path('app_login') }}"><i class="fas fa-user"></i>mon compte</a>
+    <a href=""><i class="fas fa-shopping-bag"></i>panier</a>
+</nav>
+    
 <a href="#" class="btn">
     <img src="{{ asset('assets/images/menu.svg') }}" alt="#" class="menuIcon">
 </a>
@@ -22,7 +27,7 @@
             <li class="MenuListItem">Actualités</li>
         </a>
 
-        <a href="#">
+        <a href="{{ path('glossaire') }}">
             <li class="MenuListItem">Glossaire</li>
         </a>
 
