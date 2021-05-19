@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>{% block title %}Novart{% endblock %}</title>
-
+    <!-- Lien paiement.js -->
+    <script src="https://js.stripe.com/v3/"></script>
     <!-- Lien pour îcones Fontawesome -->
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
@@ -17,7 +18,7 @@
     <link href="{{ asset('assets/css/polices.css') }}" rel="stylesheet" />
 
     {% block stylesheets %}{% endblock %}
-
+ 
   </head>
 
   <body>
@@ -41,7 +42,7 @@
     <!-- Lien menu.js -->
     <script src="{{ asset('assets/js/menu.js') }}"></script>
 
-      
+    
   </body>
 
 </html>
