@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formulaire de modification{% endblock %}
+
+{% block body%}
+
+   <h1> Formulaire de modification </h1>
+
+ 
+    
+   {{ form_start(formUsers) }} 
+   
+     <div class="row">
+            <div class="col">
+            {{form_label (formUsers.nom,'Mon Nom')}}
+               {{ form_widget(formUsers.nom) }}
+            </div>  
+            <div class="col">
+            {{form_label (formUsers.prenom,'Mon Prénom')}}
+               {{ form_widget(formUsers.prenom) }}
+            </div>  
+        </div>
+        <br>
+    
+       <br>
+       <button type="submit" class="btn btn-primary">Modifier</button>
+
+    {{ form_end(formUsers) }}
+
+{% endblock %}
