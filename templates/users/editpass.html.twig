@@ -7,7 +7,16 @@
 {% block title %}Modification du mot de passe{% endblock %}
 
 {% block body %}
+
  <div class="form">
+    {% for message in app.flashes('error') %}
+       <div class="col-xs4">
+           <div class="p-3 my-2 rounded-2 error">{{message}}</div>
+        </div>
+
+        {% endfor %}  
+
+
         <h1>Modification du mot de passe </h1>
 
         <form action="" method="post">
