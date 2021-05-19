@@ -186,7 +186,7 @@ label{
 /* FIN FORMULAIRES */
 
 /* BOUTONS ET CHAMPS SUR TOUT LE SITE */
-input:hover {
+input:hover, textarea:hover {
     opacity: 0.9;
     box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
       6px 6px 10px rgba(0, 0, 0, 0.2);
