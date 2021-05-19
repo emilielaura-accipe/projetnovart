@@ -6,16 +6,21 @@
 }
 
 /* points mise en forme */
+p {
+    font-size: 20px;
+    color: rgb(29, 58, 97);
+}
 
 .chiffre, .chiffre1 {
     display: flex;
     justify-content: center;
     align-content: center;
     margin-top: 33%;
+    color: rgb(252, 235, 203);
 }
 
 #cercle1, #cercle {
-    border-radius:50%;
+    border-radius: 50%;
     width: 150px;
     height: 150px;
     font-size: 30px;
@@ -31,6 +36,3 @@
     background-color: rgb(68, 133, 120);;
     border: 10px solid rgb(35, 57, 54);
 }
-
-
-  

@@ -2,6 +2,7 @@ body{
     padding: 0;
     margin: 0;
     width: 100%;
+    min-height: 120vh;
     background-color: rgb(252, 235, 203);
     font-family: 'Router-Book';
 }
@@ -107,6 +108,7 @@ h1{
     color: rgb(29, 58, 97);
     margin-top: 50px;
     text-align: center;
+    padding-top: 50px;
 }
 
 h2{
