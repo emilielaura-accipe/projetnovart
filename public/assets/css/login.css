@@ -1,3 +1,7 @@
+body{
+    height: 120vh;
+}
+
 h1{
     color: rgb(68, 133, 120);
 }
@@ -25,6 +29,10 @@ button{
 }
 
 #crea_compte span {
+    color: rgb(68, 133, 120);
+}
+
+button[type="submit"]:active {
     color: rgb(68, 133, 120);
 }
 

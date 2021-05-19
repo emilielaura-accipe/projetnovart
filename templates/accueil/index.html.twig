@@ -8,6 +8,7 @@
 
 {% block javascript %}
     <script src="{{ asset('assets/js/menu.js') }}"></script>
+    
     <script src="{{ asset('assets/js/accueil.js') }}"></script>
 {% endblock %}
 
@@ -16,15 +17,11 @@
     <!-- DIV Header (Carousel) -->
     <header>
 
-        <div id="logoHeader">
-            <span>ICI LE LOGO NOVART</span>
-        </div>
-
         <div class="slider">
-            <img class="active" src="./assets/images/Kandinsky1.jpg">
-            <img src="./assets/images/Picasso.jpg">
-            <img src="./assets/images/jr.jpg">
-            <img src="./assets/images/Kandinsky3.jpg">
+            <img class="active" src="./assets/images/Accueil2.jpg">
+            <img src="./assets/images/Accueil.jpg">
+            <img src="./assets/images/Accueil3.jpg">
+            <img src="./assets/images/Accueil4.jpg">
         <div>
 
         <h1>Apprendre l'art simplement</h1>
@@ -42,7 +39,6 @@
 
     </header>
 
-
     <!-- DIV Présentation -->
     <div id="presentation">
         <div id="entetePres">
@@ -52,7 +48,7 @@
         <div id="elementsPres">
 
             <div class="pictoPres">
-                <i class="fas fa-puzzle-piece fa-7x"></i>
+                <i class="fas fa-paint-brush fa-7x"></i>
                 <h3>Un thème artistique <br> par mallette</h3>
                 <li>L'art abstrait</li>
                 <li>La photographie</li>
@@ -71,7 +67,7 @@
             </div>
 
             <div class="pictoPres">
-                <i class="fas fa-puzzle-piece fa-7x"></i>
+                <i class="fas fa-book fa-7x"></i>
                 <h3>Des contenus <br> accessibles pour tous</h3>
                 <li>Pour les petits <br> comme pour les grands</li>
             </div>
@@ -87,33 +83,28 @@
         <h2>Les dernières actualités artistiques</h2>
 
         <div id="blocActu">
-      
+
             <div class="articleActu">
                 <div class="titreActu">
-                    <h5>Ici le titre de l'article</h5>
+                    <h5>Ici titre article</h5>
                 </div>
             </div>
             
             <div class="articleActu">
                 <div class="titreActu">
-                    <h5>Ici le titre de l'article</h5>
+                    <h5>Ici titre article</h5>
                 </div>
             </div>
 
             <div class="articleActu">
                 <div class="titreActu">
-                    <h5>Ici le titre de l'article</h5>
+                    <h5>Ici titre article</h5>
                 </div>
             </div>
 
         </div>
 
     </div>
-
-    <!-- DIV Footer -->
-    {% block footer %}
-        {{ include('footer.html.twig') }}
-    {% endblock %}
 
 {% endblock %}
 

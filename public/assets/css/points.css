@@ -1,24 +1,38 @@
-#boxpts{
+#boxpts {
     display: flex;
     margin: 0 auto;
     text-align: center;
-    width: 60%;
-    
+    width: 50%;
 }
+
 /* points mise en forme */
-.point{
-    width: 100%;
-    
-    
+p {
+    font-size: 20px;
+    color: rgb(29, 58, 97);
 }
 
-#cercle1, #cercle{
-    background:rgb(64, 165, 161);
-    border-radius:50%;
-    width:160px;
-    height:160px;
-    border: 10px solid rgb(68, 133, 120);
+.chiffre, .chiffre1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 33%;
+    color: rgb(252, 235, 203);
 }
 
-
-  
+#cercle1, #cercle {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    font-size: 30px;
+    justify-content: center;
+    align-content: center;
+    margin: 130px;
+}
+#cercle {
+    background:rgb(250, 177, 93);
+    border: 10px solid rgb(240, 104, 83);
+}
+#cercle1 {
+    background-color: rgb(68, 133, 120);;
+    border: 10px solid rgb(35, 57, 54);
+}

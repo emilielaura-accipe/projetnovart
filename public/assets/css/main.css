@@ -2,6 +2,7 @@ body{
     padding: 0;
     margin: 0;
     width: 100%;
+    min-height: 120vh;
     background-color: rgb(252, 235, 203);
     font-family: 'Router-Book';
 }
@@ -9,6 +10,14 @@ body{
 /* LIENS */
 a{
     text-decoration: none;
+}
+
+/* ENTETE LOGO */
+#logoHeader {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 2%;
 }
 
 /* NAVIGATION */
@@ -99,12 +108,21 @@ h1{
     color: rgb(29, 58, 97);
     margin-top: 50px;
     text-align: center;
+    padding-top: 50px;
 }
 
 h2{
     font-size: 20px;
     font-family: 'Router-Book';
     color: rgb(29, 58, 97);
+    text-align: center;
+}
+
+h3 {
+    color: rgb(29, 58, 97);
+    margin-top: 30px;
+    font-family: 'Router-Bold';
+    font-size: 18px;
     text-align: center;
 }
 /* FIN TITRES */
@@ -115,7 +133,7 @@ h2{
     margin: 0 auto;
     width: 40%;
     font-family: 'Router-Book';
-    padding-top: 150px;
+    padding-top: 90px;
     margin-bottom: 100px;;
 }
 
@@ -152,5 +170,33 @@ label{
     border-radius: 7px;
     margin: 15px 0px;
     border: none;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.form button[type="submit"]:hover {
+    opacity: 0.9;
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+      6px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form button[type="submit"]:active {
+    opacity: 1;
+    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+      inset 8px 8px 16px rgba(0, 0, 0, 0.1);
 }
 /* FIN FORMULAIRES */
+
+/* BOUTONS ET CHAMPS SUR TOUT LE SITE */
+input:hover, textarea:hover {
+    opacity: 0.9;
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+      6px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+input:active {
+    opacity: 1;
+    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+      inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+}
+/* FIN BOUTONS DIVERS */

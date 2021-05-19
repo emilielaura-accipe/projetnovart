@@ -25,22 +25,28 @@
     {{ include('menu.html.twig') }}
 
     <!-- Logo Novart à coder ici -->
+    <div id="logoHeader">
+      <img src="./assets/images/Logo-Novart2.png">
+    </div>
 
     {% block body %}
 
-    {% block footer %}{% endblock %}
+      {% block footer %}
+        {{ include('footer.html.twig') }}
+      {% endblock %}
 
     {% endblock %}
 
     <!-- Lien Green Sock -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 
-    {% block javascript %}{% endblock %}
+    <!-- Lien menu.js -->
+    <script src="{{ asset('assets/js/menu.js') }}"></script>
 
     <script src="{{ asset('assets/js/mallettes.js') }}"></script>
 
-    <!-- Lien menu.js -->
-    <script src="{{ asset('assets/js/menu.js') }}"></script>
+    {% block javascript %}
+    {% endblock %}
 
     
   </body>

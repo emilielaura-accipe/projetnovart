@@ -6,10 +6,14 @@ h2{
     color: rgb(29, 58, 97);   
 }
 
+.message textarea{
+    padding-bottom: 150px;
+}
+
 button{
     background-color:rgb(29, 58, 97);
 }
 
-.message textarea{
-    padding-bottom: 150px;
+button[type="submit"]:active {
+    color: rgb(29, 58, 97);
 }

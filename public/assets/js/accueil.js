@@ -22,7 +22,7 @@ suivant.addEventListener('click', slideSuivante)
 function slidePrecedente() {
     carou[count].classList.remove('active');
 
-    if(count > 1) {
+    if(count > 0) {
         count--;
     }
     else {

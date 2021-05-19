@@ -21,6 +21,10 @@ h1{
     text-decoration: underline;
 }
 
+button[type="submit"]:active {
+    color: rgb(91, 76, 141);
+}
+
 hr{
     padding: 0.7px;
     background-color: rgb(91, 76, 141);

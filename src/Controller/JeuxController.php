@@ -37,6 +37,16 @@ class JeuxController extends AbstractController
             'controller_name' => 'DefaultController',
         ]);
     }
+
+    /**
+     * @Route("/jeux/coloriage", name="coloriage")
+     */
+    public function coloriage(): Response
+    {
+        return $this->render('jeux/coloriage/coloriage.html.twig', [
+            'controller_name' => 'DefaultController',
+        ]);
+    }
     
     /**
      * @Route("/jeux/points", name="end_game")

@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Coloriage {% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('assets/css/coloriage.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block javascript %}
+    <script src="{{ asset('assets/js/dessin.js') }}"></script>
+    <script src="{{ asset('assets/js/coloriage.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+
+    <div id="EnteteColo">
+        <h1>Coloriage</h1>
+
+        <h2>Dessine comme ?</h2>
+
+        <h3>Pense aussi à lire ladescription et la légende de l'oeuvre proposée. Ces informations te serviront pour le quizz.</h3>
+    </div>
+
+    <div id="boutonPartie">     
+        <input type"button" class"partie" value="Nouveau coloriage" onClick="window.location.reload()"/>
+    </div>
+
+    <div id="dessin">
+
+        <canvas id="feuille">
+        </canvas>
+        
+        <div id="blocOutils">
+            <div id="palette">
+                <div data-color="blue"></div>
+                <div data-color="green"></div>
+                <div data-color="yellow"></div>
+                <div data-color="red"></div>
+                <div data-color="white"></div>
+                <div data-color="purple"></div>
+                <div data-color="black"></div>
+            </div>
+
+            <div id="outils">
+                <div id="plus"><i class="fas fa-plus"></i></div>
+                <div id="moins"><i class="fas fa-minus"></i></div>
+                <div id="effacer"><i class="fas fa-eraser"></i></div>
+                <!-- <div id="effacer"><i class="fas fa-times"></i></div> -->
+            </div>
+        </div>
+
+    </div>
+
+    <div id="description">
+        <h2>Description de l'oeuvre</h2>
+
+        <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.</p>
+
+        <div class="legende">
+            <h2>Légende de l'oeuvre</h2>
+            <p>Le Violon (Picasso) </p>
+        </div>
+    
+    </div>
+
+{% endblock %}

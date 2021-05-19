@@ -1,9 +1,3 @@
-/* Page d'un jeu */
-body{
-    height: 130vh;
-    background-color: rgb(252, 235, 203);
-}
-
 #texte{
     margin: 0 auto;
     width: 50%;
@@ -15,19 +9,22 @@ body{
     justify-content: space-around;
     width: 80%;
     margin: 0 auto;
-    padding-top: 5%;
+    margin-top: 50px;
 }
 
 .blocJeu{
     width: 30%;
     height: 500px;
     background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgb(253, 226, 174);   
 }
 
 .blocJeu p{
     height: 80px;
     width: 70%;
     background-color: rgb(91, 76, 141);
+    border-radius: 8px;
     text-align: center;
     margin: 0 auto;
     margin-top: 420px;
@@ -35,19 +32,19 @@ body{
     color: rgb(255, 226, 193);
     padding-top: 40px;
 }
-.blocJeu .panier{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-.panier{
+
+.btnP {
+    display: block;
+    width: 50%;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 150px;
     background-color:rgb(68, 133, 120);
-    border: none;
+    color: rgb(255, 226, 193);
+    margin-bottom: 150px;
     border-radius: 5px;
-    width: 10%;
-    height: 15%;
+    font-family: 'Router-Book';
     font-size: 25px;
-    margin-top: 60px;
-    margin-left: 45%;
+    border: none;
+    cursor: pointer;
 }
