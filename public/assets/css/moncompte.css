@@ -1,15 +1,13 @@
-
 .box{
-    height: 200vh;
+    height: 200px;
 }
-
 .container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 700px;
-    height: 400px;
+    height: 650px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgb(248, 219, 166);
     color: rgb(29, 58, 97);
@@ -38,7 +36,7 @@
 }
 
 .contenu {
-    height: 70%;
+    height: 100%;
     width: 100%;
     position: absolute;
     opacity: 0;
