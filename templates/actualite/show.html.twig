@@ -17,7 +17,9 @@
             <img src="{{actualite.image}}">
         </div>
 
-        <span>{{actualite.legende}}</span>
+        <div class="legende">
+            <span>{{actualite.legende}}</span>
+        </div>
 
         <div class="descripActu">
             <p>{{actualite.contenu}}</p>                   
@@ -25,7 +27,9 @@
 
     </div>
 
-    <a class="retourActu" href="" role="button">Retour aux actualités</a>
+    <div id="retour">
+        <a class="retourActu" href="{{ path('actualite') }}" role="button"><i class="fas fa-long-arrow-alt-left"></i>Retour aux actualités</a>
+    </div>
  
 {% endblock %}
                    

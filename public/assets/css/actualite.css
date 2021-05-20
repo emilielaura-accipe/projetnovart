@@ -3,9 +3,7 @@ Ce fichier CSS contient deux codes différents à la suite :
 . ligne 5 à 71 --> le css de la page "Toutes les actualités".
 . à partir de la ligne 75 --> le css de la page "Une actualité".
 *****/
-body{
-    min-height: 100vh;
-}
+
 
 /* CSS page Toutes les actualités */
 #blocActu {
@@ -79,30 +77,50 @@ h5{
 
 /* Début CSS page D'une actualité (show/{id}) */
 #containerActu {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     padding-top: 50px;
+    margin-bottom: 50px;
 }
 
 .oeuvre {
     width: 100%;
-    height: 25%;
 }
 
 .oeuvre img {
     max-width: 100%;
-    max-height: 200px;
 }
 
-span {
-    font-size: 16px;
-    color: rgb(29, 58, 97);
-    margin-top: 50px;
-}
-
-.descripActu p{
+.legende {
     font-size: 18px;
+    color: rgb(68, 133, 120);
+    margin-top: 20px;
+}
+
+.descripActu{
+    min-height: 30vh;
+    margin-top: 40px;
+    font-size: 22px;
     color: rgb(29, 58, 97);
+}
+
+#retour {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.retourActu {
+    color: rgb(29, 58, 97);
+    font-size: 18px;
+}
+
+.retourActu:hover {
+    color: rgba(29, 58, 97, 0.726);
+}
+
+i {
+    padding-right: 10px;
 }
 
 
