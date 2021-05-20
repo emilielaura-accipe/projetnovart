@@ -1,3 +1,8 @@
+
+.box{
+    height: 200vh;
+}
+
 .container {
     position: absolute;
     top: 50%;
