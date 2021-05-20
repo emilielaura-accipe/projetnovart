@@ -12,6 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoder;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
+
 class UsersController extends AbstractController
 {
     /**
@@ -26,71 +27,73 @@ class UsersController extends AbstractController
     /**
      * @Route("/users/add", name="users_add")
      */
-    public function add(Request $request)
+    public function add(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
         $users = new Users;
-        $formUser = $this->createForm(UsersType::class,$users);
-        
-        
+        $formUser = $this->createForm(UsersType::class, $users);
+
+
         $formUser->handleRequest($request);
-        if($formUser->isSubmitted() && $formUser->isValid())
-        {
-         $entityManger = $this->getDoctrine()->getManager();
-         $entityManger->persist($users);
-         $entityManger->flush();
+        if ($formUser->isSubmitted() && $formUser->isValid()) {
+            $entityManger = $this->getDoctrine()->getManager();
+            $users->setPassword(
+                $passwordEncoder->encodePassword(
+                    $users,
+                    $formUser->get('password')->getData()
+                )
+            );
 
-         return $this->redirectToRoute('mon_compte/index.html.twig');
-        }                   
+            $entityManger->persist($users);
+            $entityManger->flush();
 
-        return $this->render('users/form-add.html.twig',[
-             'formUser' =>$formUser->createView()
+            return $this->redirectToRoute('mon_compte');
+        }
+
+        return $this->render('users/form-add.html.twig', [
+            'formUser' => $formUser->createView()
         ]);
-    } 
+    }
     /**
      * @Route("/users/edit/{id} ", name="users_edit")
      */
-    public function edit(Users $users, Request $request)  
+    public function edit(Users $users, Request $request)
     {
-        $formUsers = $this->createForm(UsersType::class,$users);
-        
+        $formUsers = $this->createForm(UsersType::class, $users);
+
         $formUsers->handleRequest($request);
 
-        if($formUsers->isSubmitted() && $formUsers->isValid())
-        {
-                $entityManger = $this->getDoctrine()->getManager();
-                             
-                $entityManger->flush();
-                    
-                return $this->redirectToRoute('mon_compte');
-        }                                     
+        if ($formUsers->isSubmitted() && $formUsers->isValid()) {
+            $entityManger = $this->getDoctrine()->getManager();
 
-         return $this->render('users/form-edit.html.twig', [  
-         'formUsers'=>$formUsers->createView()
-     ]);                           
+            $entityManger->flush();
+
+            return $this->redirectToRoute('mon_compte');
+        }
+
+        return $this->render('users/form-edit.html.twig', [
+            'formUsers' => $formUsers->createView()
+        ]);
     }
 
-    
+
     /**
      * @Route("/users/pass/modifier", name="users_pass_modifier")
      */
 
-    public function editPass(Request $request,UserPasswordEncoderInterface $passwordEncoder)
+    public function editPass(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
-        if($request->isMethod('POST')){
+        if ($request->isMethod('POST')) {
             $em = $this->getDoctrine()->getManager();
 
             $users = $this->getUser();
 
             // On vérifie si les 2 motts de passe sont identiques
-            if($request->request->get('password') == $request->request->get('password2')){
-
-            }else{
-                $this->addFlash('error','Les deux mots de passe ne sont pas indetiques');
+            if ($request->request->get('password') == $request->request->get('password2')) {
+            } else {
+                $this->addFlash('error', 'Les deux mots de passe ne sont pas indetiques');
             }
         }
-        
-        return $this->render('users/editpass.html.twig',[
-             
-        ]);
+
+        return $this->render('users/editpass.html.twig', []);
     }
 }
