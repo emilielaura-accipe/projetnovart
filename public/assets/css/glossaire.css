@@ -1,5 +1,6 @@
 #containerGlo {
     width: 70%;
+    min-height: 470vh;
     margin: 0 auto;
     text-align: center;
     color: rgb(29, 58, 97);
@@ -9,48 +10,24 @@ h2 {
     margin-bottom: 70px;
 }
 
-#itemGlo {
-    margin-bottom: 20px;
-    font-size: 17px;
-}
-
-#listeGlo a {
-    padding: 10px;
-    color: rgb(29, 58, 97);
-}
-
-hr {
-    margin-top: 30px;
-    width: 75%;
-    height: 1px;
-    background-color: rgb(29, 58, 97);
-    border: none;
-}
-
 #blocDef {
-    display: flex;
-    justify-content: space-between;
+    column-count: 2;
+    column-gap: 2.5em;
     text-align: left;
-    margin-top: 50px;
 }
 
-.textAnim {
-    display: block;
-    width: 45%;
+#def {
+    padding-top: 35px;
 }
 
 h3 {
     font-family: 'Router-Bold';
-    font-size: 50px;
+    font-size: 40px;
     color: rgb(68, 133, 120);
-}
-
-h4 {
-    font-family: 'Router-Bold';
-    font-size: 25px;  
-    margin-bottom: 0;
+    margin-bottom: 5px;
 }
 
 p {
+    font-size: 18px;
     margin-top: 0;
 }

@@ -13,67 +13,14 @@
     <div id="containerGlo">
         <h2>Comme dans chaque domaine, il existe un jargon de l'art. Vous retrouverez ici les principaux mots utiliser dans l'art et l'histoire de l'art, afin de mieux comprendre les termes utiliser sur le site, mais aussi lors de vos sorties culturelles et artistiques.</h2>
 
-        <div id="itemGlo">RECHERCHER PAR LETTRE</div>
-
-        <div id="listeGlo">
-            <a href="">A</a>
-            <a href="">B</a>
-            <a href="">C</a>
-            <a href="">D</a>
-            <a href="">E</a>
-            <a href="">F</a>
-            <a href="">G</a>
-            <a href="">H</a>
-            <a href="">I</a>
-            <a href="">J</a>
-            <a href="">K</a>
-            <a href="">M</a>
-            <a href="">N</a>
-            <a href="">O</a>
-            <a href="">Q</a>
-            <a href="">R</a>
-            <a href="">S</a>
-            <a href="">T</a>
-            <a href="">U</a>
-            <a href="">V</a>
-            <a href="">W</a>
-            <a href="">X</a>
-            <a href="">Y</a>
-            <a href="">Z</a>
-        </div>
-
-        <hr>
-
         <div id="blocDef">
-
-            <div class="textAnim">
                
             {% for glossaire in glossaires %} 
-            
-                {% set letter = glossaire.mot|first|upper %}
-                 <h3>{{ letter }}.</h3>
-                 <h1>{{glossaire.mot}} </h1>
-                 <p>{{ glossaire.definition}} </p>
-                
-
+            <div id="def">
+                <h3>{{glossaire.mot}} </h3>
+                <p>{{ glossaire.definition}} </p>
+            </div>
             {% endfor %} 
-
-            </div>
-
-            <div class="textAnim">
-                <h3>B.</h3>
-
-                <div class="defGlo">
-                    <h4>Bauhaus</h4>
-                    <p>École d’arts appliqués fondée par Walter Gropius à Weimar (Allemagne) en 1919 et fermée par le régime nazi en 1933. Son rayonnement perdure par l’exil de ses membres. Elle propose de faire la synthèse entre les arts, l’artisanat et l’industrie. Tout le design contemporain en découle.</p>
-                </div>
-
-                <div class="defGlo">
-                    <h4>Bas-relief</h4>
-                    <p>Type de sculpture en deux dimensions. Le matériau est creusé afin que la forme souhaitée apparaisse en épaisseur par rapport au fond.</p>
-                </div>
-
-            </div>
 
         </div>
 
