@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Users;
 use App\Form\UsersType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -38,13 +39,37 @@ class UsersController extends AbstractController
          $entityManger->persist($users);
          $entityManger->flush();
 
-         return $this->redirectToRoute('mon/compte');
+         return $this->redirectToRoute('mon_compte/index.html.twig');
         }                   
 
         return $this->render('users/form-add.html.twig',[
              'formUser' =>$formUser->createView()
         ]);
-    }   
+    } 
+    /**
+     * @Route("/users/edit/{id} ", name="users_edit")
+     */
+    public function edit(Users $users, Request $request)  
+    {
+        $formUsers = $this->createForm(UsersType::class,$users);
+        
+        $formUsers->handleRequest($request);
+
+        if($formUsers->isSubmitted() && $formUsers->isValid())
+        {
+                $entityManger = $this->getDoctrine()->getManager();
+                             
+                $entityManger->flush();
+                    
+                return $this->redirectToRoute('mon_compte');
+        }                                     
+
+         return $this->render('users/form-edit.html.twig', [  
+         'formUsers'=>$formUsers->createView()
+     ]);                           
+    }
+
+    
     /**
      * @Route("/users/pass/modifier", name="users_pass_modifier")
      */
