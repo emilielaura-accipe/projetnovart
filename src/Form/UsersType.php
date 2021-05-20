@@ -38,8 +38,7 @@ class UsersType extends AbstractType
         
              ->add('voie')
              ->add('code_postal')
-             ->add('ville')
-             ;
+             ->add('ville');
         
     }
 

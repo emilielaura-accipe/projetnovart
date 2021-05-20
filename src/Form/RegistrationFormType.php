@@ -19,6 +19,8 @@ class RegistrationFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('nom')
+            ->add('prenom')
             ->add('email',EmailType::class)
             ->add('password', PasswordType::class, [
                 // instead of being set onto the object directly,
@@ -36,7 +38,9 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
-        ;
+            ->add('voie')
+             ->add('code_postal')
+             ->add('ville');
     }
 
     public function configureOptions(OptionsResolver $resolver)

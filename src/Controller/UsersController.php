@@ -24,9 +24,7 @@ class UsersController extends AbstractController
             'controller_name' => 'UsersController',
         ]);
     }
-    /**
-     * @Route("/users/add", name="users_add")
-     */
+
     public function add(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
         $users = new Users;
