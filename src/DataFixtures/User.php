@@ -25,6 +25,7 @@ class User extends Fixture
             ->setVoie('12 rue')
             ->setCodePostal(75013)
             ->setVille('Paris')
+            ->setRoles(['ROLE_USER','ROLE_ADMIN'])
         ;
         $password = $this->encoder->encodePassword($user1, '1234');
         $user1->setPassword($password);
