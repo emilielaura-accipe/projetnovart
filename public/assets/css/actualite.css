@@ -3,6 +3,9 @@ Ce fichier CSS contient deux codes différents à la suite :
 . ligne 5 à 71 --> le css de la page "Toutes les actualités".
 . à partir de la ligne 75 --> le css de la page "Une actualité".
 *****/
+body{
+    min-height: 100vh;
+}
 
 /* CSS page Toutes les actualités */
 #blocActu {

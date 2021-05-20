@@ -17,4 +17,5 @@ class MallettesController extends AbstractController
             'controller_name' => 'MallettesController',
         ]);
     }
+
 }
