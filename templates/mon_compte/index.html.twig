@@ -11,57 +11,64 @@
 {% block body %}
 
     <h1>Bienvenue sur votre compte !</h1>
-    
-    <div class="container">
 
-        <div class="container-onglets">
+    <div class="box">
+        <div class="container">
 
-            <div class="onglets active" data-anim="1">Mon profil</div>
-            <div class="onglets" data-anim="2">Mes mallettes</div>
-            <div class="onglets" data-anim="3">Remboursements</div>
-            <div class="onglets" data-anim="4">Bonus</div>
+            <div class="container-onglets">
 
-        </div>
-       
-            <div class="contenu activecontenu" data-anim="1">
+                <div class="onglets active" data-anim="1">Mon profil</div>
+                <div class="onglets" data-anim="2">Mes mallettes</div>
+                <div class="onglets" data-anim="3">Remboursements</div>
+                <div class="onglets" data-anim="4">Bonus</div>
+
+            </div >
+        
+                <div class="contenu activecontenu" data-anim="1">
+                    <div class="champs">
+                        <div>
+                        <p>Informations sur votre compte</p>
+                        <label>Nom :</label>
+                    </div>
+
                 <div class="champs">
-                    
+                    <label>Prénom :</label>
+                    {# {{ form_label(formContact.prenom,'Votre prénom')}}
+                    {{ form_widget(formContact.prenom) }} #}
+                </div>  
+        
+                <div class="champs">
+                    <label>Email :</label>
+                    {# {{ form_label(formContact.email,'Votre email')}}
+                    {{ form_widget(formContact.email) }} #}
                 </div>
 
-               <div class="champs">
-                {# {{ form_label(formContact.prenom,'Votre prénom')}}
-                {{ form_widget(formContact.prenom) }} #}
-               </div>  
-      
-               <div class="champs">
-                {# {{ form_label(formContact.email,'Votre email')}}
-                {{ form_widget(formContact.email) }} #}
-               </div>
+                    <div class="button">
+                            <button type="submit">Modification</button>
+                        
+                            
+                            <button type="submit1"> Suppression</button>
+                    </div>
 
-            <div class="button">
-                    <button type="submit">Modification</button>
-                
-                    
-                    <button type="submit1"> Suppression</button>
-                
-            </div>
-
-    
-            </div>
-   
-            <div class="contenu" data-anim="2">
-                <div class="champs">
-                    <p> Vos mallettes</p>
+        
                 </div>
-            </div>
+    
+                    <div class="contenu" data-anim="2">
+                        <div class="champs">
+                            <p> Vos mallettes</p>
+                        </div>
+                    </div>
 
-            <div class="contenu" data-anim="3">
-                <p> Vos remboursements</p>
-            </div>
-        <div class="contenu" data-anim="4">
-            <p>Vos Bonus</p>
+                    <div class="contenu" data-anim="3">
+                        <p> Vos remboursements</p>
+                    </div>
+
+                    <div class="contenu" data-anim="4">
+                    <p>Vos Bonus</p>
+
+                    </div>
+
         </div>
-
-    </div>
+    </div>   
 
 {% endblock %}
