@@ -12,12 +12,6 @@
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
-    {% if app.user %}
-        <div class="mb-3">
-           Vous voulez vous déconnecter {{ app.user.username }}, <a href="{{ path('app_logout') }}">Déconnecter</a>
-        </div>
-    {% endif %}
-
     <div class="form">
         <h1>Connexion</h1>
 
@@ -36,6 +30,12 @@
             <div class="bouton">
                 <button type="submit">Se connecter</button>
             </div>
+           
+           {% if app.user %}
+           <div class="hidden">
+           Vous voulez vous déconnecter {{ app.user.username }}<a href="{{ path('app_logout') }}">Déconnecter</a>
+          </div>
+         {% endif %}
 
         </form>
 
