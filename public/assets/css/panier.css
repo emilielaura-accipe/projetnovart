@@ -1,0 +1,20 @@
+.champs{
+    color: rgb(29, 58, 97);
+    background-color: rgb(255, 226, 193);
+    height: 240px;
+    width: 100%;
+
+}
+a{
+  
+    width: 10%;
+    height: 10px;
+    margin: 0 auto;
+    background-color:rgb(68, 133, 120);
+    color: rgb(255, 226, 193);
+    border-radius: 5px;
+    font-family: 'Router-Book';
+    font-size: 2Opx;
+    border: none;
+    cursor: pointer;
+}
