@@ -22,17 +22,62 @@ class ContactController extends AbstractController
         $formContact->handleRequest($request);
         if($formContact->isSubmitted() && $formContact->isValid())
         {
-        $entityManager = $this->getDoctrine()->getManager();
-        $entityManager->persist($contact);
-        $entityManager->flush();
+            $contact=$formContact->getData();
 
-        return $this->redirectToRoute('index');
+           $entityManager = $this->getDoctrine()->getManager();
+           $entityManager->persist($contact);
+           $entityManager->flush();
+
+        return $this->redirectToRoute('accueil');
         }                   
 
         return $this->render('contact/contact.html.twig',[
             'formContact' =>$formContact->createView()
         ]);
     }
+        /** 
+         * @Route("/contact", name="contact")
+         */
+        public function index(Request $request, \Swift_Mailer $mailer )
+        {
+            $contact = new Contact;
+            $formContact = $this->createForm(ContactType::class);
+            
+            
+            $formContact->handleRequest($request);
+            if($formContact->isSubmitted() && $formContact->isValid())
+            {
+                $contact=$formContact->getData();
+    
+                //Ici nous enverrons le mail
+                $message = (new \Swift_Message('Nouveau Contact'))
+                  //On attribue l'expéditeur
+                  ->setFrom($contact['email'])
+    
+                  //On attribue le destinataire
+                  ->setTo('ivana@test.com')
+    
+                  //On crée le message vu Twig
+                  ->setBody(
+                      $this->renderView(
+                          'email/index.html.twig',compact('contact')
+                      ),
+                      'text/html'
+                    )
+                ;
+                    //On envoie le message
+                    $mailer->send($message);
+    
+                    $this->addFlash('message', 'Le message a bien été envoyé');
+                    return $this->redirectToRoute('accueil');
+    
+            
+            }                   
+    
+            return $this->render('contact/contact.html.twig',[
+                'formContact' =>$formContact->createView()
+            ]);
+        }
     
 
 } 

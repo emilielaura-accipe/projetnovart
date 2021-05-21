@@ -8,56 +8,56 @@
 
 
 <!-- Condition  si cest panier vide ou pas-->
- {% if  items | length > 0 %}
-  <table class="table">
-        <thead>
+ <div class="champs">
+     <table class="table">
+           <thead>
                 <tr>
                     <th>Produit</th>
                     <th>Prix</th>
                     <th>Quantité</th>
                     <th>Total</th>
-                    <th></th>
+                    <th>Action</th>
+                     <td><a href="{{ path('paiement')}} ">Acheter</a></td>
                 </tr>
-         </thead>
+            </thead>
 
-        <tbody>
+            <tbody>
+                 {% for element in dataPanier %}
+                    <tr>
+                        
+                    
+                    
+            
+                        <td>
+                        
+                        
+                        </td>
+                    
+                    </tr>
 
-{% for paniers in panier %}
-                  <td>{{ paniers.mallette.titre }} </td>
-                  <td>{{ paniers.mallette.prix }} </td>
-                  <td>{{ paniers.quantity }} </td>
-                   <td>{{ paniers.mallette.prix * paniers.quantity }} </td>
-                   <td>
+                 {% else %}
+                    <tr>
+                       <td colspan="5" class="text-center">Votre panier est vide <td>
+                    </tr>
+             
 
-                   <a href="{{ path('panier_remove',{'id': paniers.mallette.id} )}} " class="">
-                    <i class="fas fa-trash"></i>
-                   </td>
-{% endfor %}        
+                 {% endfor %}
+            
+                
+                        
         
-        </tbody>
-        <tfoot>
+            </tbody>
+         <tfoot>
                <tr>
-                  <td colspan="3" class="text">Total<td>
-                  <td>{{ total }} </td>
-                  <td></td>
-             
-             
+                   <td class="right">Total</td>
+                   <td><a href="#">Suprimer</a></td> </td>
+               
                </tr>
-             
-        </tfoot> 
+               
+          </tfoot> 
 
-</table>
+       </table>
 
+    </div>   
 
- {% else %}
-
-    
-          <h2>Surprise, c'est vide !</h2>
-
- {% endif %}
-
-
-
-
-</div>
 {% endblock %}

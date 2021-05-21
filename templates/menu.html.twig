@@ -35,6 +35,11 @@
         <a href="{{ path('app_login') }}">
             <li class="MenuListItem">Connexion</li>
         </a>
+        {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('contact') }}">
+            <li class="MenuListItem"> Admin</li>
+        </a>
+        {% endif %}
 
         <a href="{{ path('panier') }}">
             <li class="MenuListItem">Panier</li>
@@ -43,6 +48,7 @@
         <a href="{{ path('contact_add') }}">
             <li class="MenuListItem">Contact</li>
         </a>
+        
     </ul>
     
 </div>
