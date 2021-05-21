@@ -1,6 +1,7 @@
 body{
     height: 120vh;
     box-sizing: border-box;
+    color: rgb(29, 58, 97);
 }
 
 #EnteteMemo, #description {
@@ -87,3 +88,20 @@ input:active {
     color: rgb(29, 58, 97);
 }
 
+#description h3 {
+    font-size: 28px;
+    padding-bottom: 40px;
+}
+
+.oeuvreDescrip {
+    padding-bottom: 20px;
+}
+
+h4 {
+    font-size: 20px;
+    font-family: 'Router-Bold';
+}
+
+p {
+    font-size: 18px;
+}

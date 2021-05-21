@@ -14,11 +14,6 @@ class MallettesController extends AbstractController
      */
     public function index(): Response
     {
-<<<<<<< HEAD
-        return $this->render('mallette/index.html.twig', [
-            'controller_name' => 'MallettesController',
-        ]);
-=======
         $mallette = $this->getDoctrine()->getRepository(Mallette::class)->findAll();
 
         return $this->render('mallettes/index.html.twig', [
@@ -27,7 +22,6 @@ class MallettesController extends AbstractController
             ]);
 
 
->>>>>>> 82c1c9872171ad26e283e23d6d34220e55c03b40
     }
 
 }
