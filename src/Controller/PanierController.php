@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\Mallette;
-use App\Entity\Panier;
 use App\Repository\MalletteRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,8 +17,6 @@ class PanierController extends AbstractController
     public function index(SessionInterface $sesion,MalletteRepository $malletteRepository)
     {   
 
-        $panier = $this->getDoctrine()->getRepository(Panier::class)->findAll();
-
         $panier = $sesion->get('panier',[]);
         $dataPanier = [];
         $total=0;
@@ -29,8 +26,7 @@ class PanierController extends AbstractController
             $mallette=$malletteRepository->find($id);
             $dataPanier[] = [
                 'mallette'=> $malletteRepository->find($id),
-                'quantity'=> $quantite,
-                'panier'=>$panier
+                'quantity'=> $quantite
             ];
            
         }
@@ -38,10 +34,9 @@ class PanierController extends AbstractController
             $total = $panier['mallette'];
         }
 
-        return $this->render('panier/index.html.twig', compact("dataPanier","mallette","panier")
-        ) ;
+        return $this->render('panier/index.html.twig',['dataPanier' => $dataPanier]
+    );
     }
-    
     
     /**
      * @Route("/panier/add/{id} ", name="panier_add")

@@ -26,7 +26,11 @@
             </thead>
 
             <tbody>
-                 {% for element in dataPanier %}
+                 {% for element in dataPanier %} 
+                 
+                      <td>{{ element.mallette.theme}} </td>
+                      <td>{{ element.mallette.titre}} </td>
+                      <td>{{ element.mallette.theme}} </td>
 
                  {% else %}
                     <tr>
