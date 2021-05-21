@@ -69,6 +69,16 @@ class Mallette
      */
     private $paniers;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $prix;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $quantite;
+
     
 
     public function __construct()
@@ -235,6 +245,30 @@ class Mallette
                 $panier->setMallette(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPrix(): ?string
+    {
+        return $this->prix;
+    }
+
+    public function setPrix(string $prix): self
+    {
+        $this->prix = $prix;
+
+        return $this;
+    }
+
+    public function getQuantite(): ?int
+    {
+        return $this->quantite;
+    }
+
+    public function setQuantite(int $quantite): self
+    {
+        $this->quantite = $quantite;
 
         return $this;
     }

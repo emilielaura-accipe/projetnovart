@@ -1,0 +1,15 @@
+#checkout-button{
+    display: block;
+    width: 50%;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 150px;
+    background-color:rgb(68, 133, 120);
+    color: rgb(255, 226, 193);
+    margin-bottom: 150px;
+    border-radius: 5px;
+    font-family: 'Router-Book';
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+}

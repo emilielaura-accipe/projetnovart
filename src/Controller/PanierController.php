@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Mallette;
+use App\Entity\Panier;
 use App\Repository\MalletteRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,37 +17,40 @@ class PanierController extends AbstractController
      */
     public function index(SessionInterface $sesion,MalletteRepository $malletteRepository)
     {   
+
+        $panier = $this->getDoctrine()->getRepository(Panier::class)->findAll();
+
         $panier = $sesion->get('panier',[]);
-        $panierWithData = [];
+        $dataPanier = [];
+        $total=0;
         
-        foreach($panier as $id =>$quantity){
-            $panierWithData[] = [
+        //On 
+        foreach($panier as $id =>$quantite){
+            $mallette=$malletteRepository->find($id);
+            $dataPanier[] = [
                 'mallette'=> $malletteRepository->find($id),
-                'quantity'=> $quantity
+                'quantity'=> $quantite,
+                'panier'=>$panier
             ];
+           
         }
-        $total = 0;
-
-        foreach($panierWithData as $panier ){
-            $totalPanier = $panier['mallette']->getPrice() * $panier['quantity'];
-            $total += $totalPanier;
-
-
+        foreach($dataPanier as $panier ){
+            $total = $panier['mallette'];
         }
 
-        return $this->render('panier/index.html.twig', [
-            'panier' => $panierWithData,
-            'total'=>$total
-        ]);
+        return $this->render('panier/index.html.twig', compact("dataPanier","mallette","panier")
+        ) ;
     }
-
+    
     
     /**
-     * @Route("/panier/add/{$id} ", name="panier_add")
+     * @Route("/panier/add/{id} ", name="panier_add")
      */
-    public function add($id, SessionInterface $sesion)
+    public function add(Mallette $mallette, SessionInterface $session)
     {
-     $panier = $sesion->get('panier',[] );
+     //On récupere le panier 
+     $panier = $session->get('panier',[] );
+     $id= $mallette->getId();
 
      if(!empty($panier[$id] )){
          $panier[$id]++;
@@ -53,21 +58,28 @@ class PanierController extends AbstractController
         $panier[$id] = 1;
      }
 
-     $sesion->set('panier',$panier);
+     $session->set('panier',$panier);
 
-     return $this->redirectToRoute('panier/index.html.twig');
+     return $this->redirectToRoute('panier');
 
     }
     /**
-     * @Route("/panier/remove/{$id} ", name="panier_remove")
+     * @Route("/panier/remove/{id}", name="panier_remove")
      */
-    public function remove($id, SessionInterface $sesion)
+    public function remove(Mallette $mallette, SessionInterface $sesion)
     {
         $panier = $sesion->get('panier',[] );
+        $id = $mallette->getId();
 
         if(!empty($panier[$id] )){
-            unset($panier[$id]);
-        }
+            if($panier[$id]>1){
+               $panier[$id]--;
+            }else{
+                unset($panier[$id]);
+            }
+        }else{
+            $panier[$id] = 1;
+        }  
 
         $sesion->set('panier', $panier);
         

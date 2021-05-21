@@ -1,11 +1,15 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    <link href="{{ asset('assets/css/paiement.css') }}" rel="stylesheet" />
+{% endblock %}
+
 {% block title %}{% endblock %}
 
 {% block body %}
      <h1> Votre achat</h1>
     
-    <button id="checkout-button">Acheter</button>
+    <button id="checkout-button">Payer</button>
 
 {% endblock %}
 
