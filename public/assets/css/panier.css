@@ -5,10 +5,10 @@
     width: 100%;
 
 }
-a{
-  
-    width: 10%;
-    height: 10px;
+.panier{
+    display: block;
+    width: 30%;
+    height: 20px;
     margin: 0 auto;
     background-color:rgb(68, 133, 120);
     color: rgb(255, 226, 193);
@@ -17,4 +17,14 @@ a{
     font-size: 2Opx;
     border: none;
     cursor: pointer;
+}
+.panier1{
+    display: block;
+    width: 30%;
+    height: 20px;
+    background-color:rgb(68, 133, 120);
+    color: rgb(255, 226, 193);
+    border-radius: 5px;
+    font-family: 'Router-Book';
+    font-size: 2Opx;
 }

@@ -21,23 +21,12 @@
                     <th>Quantité</th>
                     <th>Total</th>
                     <th>Action</th>
-                     <td><a href="{{ path('paiement')}} ">Acheter</a></td>
+                     <td class="panier"><a href="{{ path('paiement')}} ">Acheter</a></td>
                 </tr>
             </thead>
 
             <tbody>
                  {% for element in dataPanier %}
-                    <tr>
-                        
-                    
-                    
-            
-                        <td>
-                        
-                        
-                        </td>
-                    
-                    </tr>
 
                  {% else %}
                     <tr>
@@ -45,16 +34,13 @@
                     </tr>
              
 
-                 {% endfor %}
-            
-                
-                        
+                 {% endfor %}        
         
             </tbody>
          <tfoot>
-               <tr>
-                   <td class="right">Total</td>
-                   <td><a href="#">Suprimer</a></td> </td>
+               <tr >
+                   <td class="panier1">Total</td>
+                   <td class="panier1"><a href="#">Suprimer</a></td> </td>
                
                </tr>
                
