@@ -7,7 +7,11 @@
 {% endblock %}
 
 {% block body %}
-
+    {% for message in app.flashes('message')%}
+      <div class="alert alert-success" role="alert">
+             {{ message }}
+      </div>
+     {% endfor %}
    <div class="form">
      
       <h1> Formulaire de contact </h1>
@@ -36,9 +40,6 @@
             {{ form_widget(formContact.message) }}
          </div> 
 
-         <div class="bouton">
-            <button type="submit">Envoyer</button>
-         </div>
 
       {{ form_end(formContact) }}
 
