@@ -22,7 +22,8 @@ class Mallette extends Fixture
             Il a découvert le talent de Marie Laurencin quand elle faisait de la peinture sur porcelaine.')
             ->setImageOeuvres('/assets/images/LhommedanslavilleFL.jpg')
             ->setLegendeOeuvres('L\'homme dans la ville, 1959, Fernand Léger')
-            
+            ->setPrix('10')
+            ->setQuantite('1')
         ;
         $manager->persist($mallette1);
         $manager->flush();
@@ -38,7 +39,8 @@ class Mallette extends Fixture
            ->setDescriptionArtistes('')
            ->setImageOeuvres('')
            ->setLegendeOeuvres('')
-        
+           ->setPrix('10')
+           ->setQuantite('1')
         ;
       $manager->persist($mallette2);
 
