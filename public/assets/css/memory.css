@@ -3,7 +3,7 @@ body{
     box-sizing: border-box;
 }
 
-#EnteteMemo {
+#EnteteMemo, #description {
     width: 60%;
     margin: 0 auto;
     padding-bottom: 50px;
@@ -49,6 +49,16 @@ body{
     backface-visibility: hidden;
 }
 
+.backFace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backFace img {
+    width: 150px;
+}
+
 .frontFace {
     transform: rotateY(180deg);
 }
@@ -76,3 +86,4 @@ input {
 input:active {
     color: rgb(29, 58, 97);
 }
+
