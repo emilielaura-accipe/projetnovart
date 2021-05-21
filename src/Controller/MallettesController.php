@@ -16,7 +16,7 @@ class MallettesController extends AbstractController
     {
         $mallette = $this->getDoctrine()->getRepository(Mallette::class)->findAll();
 
-        return $this->render('mallettes/index.html.twig', [
+        return $this->render('mallette/index.html.twig', [
             'mallettte' => $mallette
             
             ]);

@@ -5,7 +5,7 @@
 }
 
 #boutonPartie {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     margin-bottom: 50px;
 }
@@ -38,7 +38,7 @@ input:active {
     width: 50%;
     height: 1000px;
     flex: 2;
-    background-image: url('../images/Kandinsky2.png');
+    background-image: url('../images/memory2.jpg');
     box-shadow:  -8px -8px 15px #dfc594,
                  8px 8px 15px #fffbbc;
 }
@@ -65,7 +65,7 @@ input:active {
     align-items: center;
 }
 
-i {
+#outils i {
     color: rgb(29, 58, 97);
 }
 
@@ -77,4 +77,24 @@ i {
     opacity: 0.9;
     box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
       6px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+#description {
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(29, 58, 97);
+}
+
+#description h4 {
+    font-size: 28px;
+    padding-top: 40px;
+}
+
+h5 {
+    font-size: 20px;
+    font-family: 'Router-Bold';
+}
+
+p {
+    font-size: 18px;
 }
